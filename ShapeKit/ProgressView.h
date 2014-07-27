@@ -10,10 +10,7 @@
 
 @interface ProgressView : ShapedView
 
--(void)setFrame:(CGRect)frame;
-
 @property (nonatomic, assign) float progress;
-
 @property (nonatomic, strong) UIColor * fillColor;
 
 @end

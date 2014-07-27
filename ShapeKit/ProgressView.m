@@ -10,17 +10,27 @@
 
 @implementation ProgressView
 
--(void)setFrame:(CGRect)frame
-{
-    UIBezierPath * path = [UIBezierPath bezierPath];
-    path.lineWidth = frame.size.height;
-    [path moveToPoint:CGPointMake(0, frame.size.height/2)];
-    [path addLineToPoint:CGPointMake(frame.size.width, frame.size.height/2)];
-    self.path = path;
-    [super setFrame:frame];
-}
-
 static NSString * const kStrokeEndAnimationKey = @"Stroke end animation";
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.shapeLayer.speed = 0;
+    
+    CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"strokeEnd"];
+    animation.speed = 0.25;
+    animation.calculationMode = kCAAnimationPaced;
+    animation.values = @[@0,@1];
+    
+    [self.shapeLayer addAnimation:animation forKey:kStrokeEndAnimationKey];
+    
+    UIBezierPath * path = [UIBezierPath bezierPath];
+    path.lineWidth = self.frame.size.height;
+    [path moveToPoint:CGPointMake(0, self.frame.size.height/2)];
+    [path addLineToPoint:CGPointMake(self.frame.size.width, self.frame.size.height/2)];
+    self.path = path;
+}
 
 -(void)setProgress:(float)progress
 {
@@ -30,23 +40,7 @@ static NSString * const kStrokeEndAnimationKey = @"Stroke end animation";
     {
         progress =1;
     }
-    
-    [self.shapeLayer removeAnimationForKey:kStrokeEndAnimationKey];
-    
-    [CATransaction begin];
-    
-    CABasicAnimation * drawAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    drawAnimation.fromValue = @(self.shapeLayer.strokeEnd);
-    drawAnimation.toValue = @(progress);
-    drawAnimation.duration = 0.05;
-    drawAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    drawAnimation.removedOnCompletion = YES;
-    
-    self.shapeLayer.strokeEnd = progress;
-    _progress = progress;
-    
-    [self.shapeLayer addAnimation:drawAnimation forKey:kStrokeEndAnimationKey];
-    [CATransaction commit];
+    self.shapeLayer.timeOffset = progress;
 }
 
 -(void)setFillColor:(UIColor *)fillColor

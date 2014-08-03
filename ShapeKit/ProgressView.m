@@ -30,6 +30,9 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
     [self setPath:path];
     
     [self setFillColor:[UIColor clearColor]];
+    
+    self.shapeLayer.strokeEnd = 0;
+    self.shapeLayer.strokeStart = 0;
 }
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -55,15 +58,9 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
     return _strokeEnd;
 }
 
-- (void)setProgress:(float)progress animated:(BOOL)animated {
-    if (animated) {
-        if (self.progress == progress) {
-            return;
-        }
-        [self animateToProgress:progress];
-    } else {
-        _strokeEnd = progress;
-    }
+- (void)setProgress:(float)progress animated:(BOOL)animated
+{
+    [self setStrokeEnd:progress animated:animated];
 }
 
 -(float)normalizedProgressValueFromValue:(float)value
@@ -109,17 +106,24 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
 {
     float fromValue = _strokeStart;
     
+    if ( [self.shapeLayer animationForKey:kStrokeStartAnimationKey]!=nil)
+    {
+        CAShapeLayer * presentationLayer = [self.shapeLayer presentationLayer];
+        fromValue = [presentationLayer strokeStart];
+    }
+    
     [self.layer removeAnimationForKey:kStrokeStartAnimationKey];
+    
+    self.shapeLayer.strokeStart = start;
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
     animation.duration = self.animationDuration;
     animation.valueFunction = self.animationFunction;
     animation.fromValue = @(fromValue);
     animation.toValue = @(start);
-    animation.delegate = self;
-    animation.removedOnCompletion = NO;
-    [self.shapeLayer addAnimation:animation forKey:kStrokeStartAnimationKey];
+    animation.removedOnCompletion = YES;
     
+    [self.shapeLayer addAnimation:animation forKey:kStrokeStartAnimationKey];
     _strokeStart = start;
 }
 
@@ -127,17 +131,24 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
 {
     float fromValue = _strokeEnd;
     
+    if ( [self.shapeLayer animationForKey:kStrokeEndAnimationKey]!=nil)
+    {
+        CAShapeLayer * presentationLayer = [self.shapeLayer presentationLayer];
+        fromValue = [presentationLayer strokeEnd];
+    }
+    
     [self.layer removeAnimationForKey:kStrokeEndAnimationKey];
+    
+    self.shapeLayer.strokeEnd = end;
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     animation.duration = self.animationDuration;
     animation.valueFunction = self.animationFunction;
     animation.fromValue = @(fromValue);
     animation.toValue = @(end);
-    animation.delegate = self;
-    animation.removedOnCompletion = NO;
-    [self.shapeLayer addAnimation:animation forKey:kStrokeEndAnimationKey];
+    animation.removedOnCompletion = YES;
     
+    [self.shapeLayer addAnimation:animation forKey:kStrokeEndAnimationKey];
     _strokeEnd = end;
 }
 
@@ -146,34 +157,6 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
     progress = [self normalizedProgressValueFromValue:progress];
     
     [self animateStrokeEnd:progress];
-}
-
-- (void)updateProgress
-{
-    self.shapeLayer.strokeEnd = _strokeEnd;
-    self.shapeLayer.strokeStart = _strokeStart;
-}
-
-#pragma mark - CAAnimationDelegate
-
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)finished
-{
-    if (finished)
-    {
-        if ([anim isKindOfClass:[CAPropertyAnimation class]])
-        {
-            [self updateProgress];
-            NSString * keyPath = [(CAPropertyAnimation *)anim keyPath];
-            if ([keyPath isEqualToString:@"strokeStart"])
-            {
-                [self.layer removeAnimationForKey:kStrokeStartAnimationKey];
-            }
-            else if ([keyPath isEqualToString:@"strokeEnd"])
-            {
-                [self.layer removeAnimationForKey:kStrokeEndAnimationKey];
-            }
-        }
-    }
 }
 
 @end

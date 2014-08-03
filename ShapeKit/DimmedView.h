@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import "ShapedView.h"
+#import "ShapeView.h"
 
-@interface DimmedView : ShapedView
+@interface DimmedView : ShapeView
 
 -(void)makeVisiblePath:(UIBezierPath *)visiblePath
             dimmedPath:(UIBezierPath *)dimmedPath;

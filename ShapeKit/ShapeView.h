@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShapedView : UIView
+@interface ShapeView : UIView
 
 @property (nonatomic, strong) UIBezierPath * path;
 @property (nonatomic, strong, readonly) CAShapeLayer * shapeLayer;
+
+@property (nonatomic, strong) UIColor * fillColor;
+
+@property (nonatomic, strong) UIColor * strokeColor;
 
 @end

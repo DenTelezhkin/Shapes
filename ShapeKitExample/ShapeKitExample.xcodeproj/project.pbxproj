@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A20D58E198E0C47005D0F7D /* ShapedViewPathTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A20D58D198E0C47005D0F7D /* ShapedViewPathTestCase.m */; };
 		9A5DF42719854B200034FF62 /* ShapeKitExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5DF42619854B200034FF62 /* ShapeKitExample.storyboard */; };
 		9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DF429198562C80034FF62 /* ProgressViewController.m */; };
 		9AA0172A19851133001A0666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0172919851133001A0666 /* Foundation.framework */; };
@@ -20,10 +21,9 @@
 		9AA0174419851133001A0666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0172919851133001A0666 /* Foundation.framework */; };
 		9AA0174519851133001A0666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0172D19851133001A0666 /* UIKit.framework */; };
 		9AA0174D19851133001A0666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AA0174B19851133001A0666 /* InfoPlist.strings */; };
-		9AA0174F19851133001A0666 /* ShapeKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0174E19851133001A0666 /* ShapeKitExampleTests.m */; };
 		9AA0175F198511BD001A0666 /* DimmedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175A198511BD001A0666 /* DimmedView.m */; };
 		9AA01760198511BD001A0666 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175C198511BD001A0666 /* ProgressView.m */; };
-		9AA01761198511BD001A0666 /* ShapedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175E198511BD001A0666 /* ShapedView.m */; };
+		9AA01761198511BD001A0666 /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175E198511BD001A0666 /* ShapeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A20D58D198E0C47005D0F7D /* ShapedViewPathTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShapedViewPathTestCase.m; path = Specs/ShapedView/ShapedViewPathTestCase.m; sourceTree = "<group>"; };
 		9A5DF42619854B200034FF62 /* ShapeKitExample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShapeKitExample.storyboard; sourceTree = "<group>"; };
 		9A5DF428198562C80034FF62 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressViewController.h; path = Controllers/ProgressViewController.h; sourceTree = "<group>"; };
 		9A5DF429198562C80034FF62 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressViewController.m; path = Controllers/ProgressViewController.m; sourceTree = "<group>"; };
@@ -55,13 +56,12 @@
 		9AA0174219851133001A0666 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9AA0174A19851133001A0666 /* ShapeKitExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShapeKitExampleTests-Info.plist"; sourceTree = "<group>"; };
 		9AA0174C19851133001A0666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9AA0174E19851133001A0666 /* ShapeKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeKitExampleTests.m; sourceTree = "<group>"; };
 		9AA01759198511BD001A0666 /* DimmedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DimmedView.h; sourceTree = "<group>"; };
 		9AA0175A198511BD001A0666 /* DimmedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DimmedView.m; sourceTree = "<group>"; };
 		9AA0175B198511BD001A0666 /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		9AA0175C198511BD001A0666 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
-		9AA0175D198511BD001A0666 /* ShapedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapedView.h; sourceTree = "<group>"; };
-		9AA0175E198511BD001A0666 /* ShapedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapedView.m; sourceTree = "<group>"; };
+		9AA0175D198511BD001A0666 /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
+		9AA0175E198511BD001A0666 /* ShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A20D58C198E0C24005D0F7D /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				9A20D58D198E0C47005D0F7D /* ShapedViewPathTestCase.m */,
+			);
+			name = Specs;
+			sourceTree = "<group>";
+		};
 		9A5DF42B198562CD0034FF62 /* Progress */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +163,7 @@
 		9AA0174819851133001A0666 /* ShapeKitExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				9AA0174E19851133001A0666 /* ShapeKitExampleTests.m */,
+				9A20D58C198E0C24005D0F7D /* Specs */,
 				9AA0174919851133001A0666 /* Supporting Files */,
 			);
 			path = ShapeKitExampleTests;
@@ -177,8 +185,8 @@
 				9AA0175A198511BD001A0666 /* DimmedView.m */,
 				9AA0175B198511BD001A0666 /* ProgressView.h */,
 				9AA0175C198511BD001A0666 /* ProgressView.m */,
-				9AA0175D198511BD001A0666 /* ShapedView.h */,
-				9AA0175E198511BD001A0666 /* ShapedView.m */,
+				9AA0175D198511BD001A0666 /* ShapeView.h */,
+				9AA0175E198511BD001A0666 /* ShapeView.m */,
 			);
 			name = ShapeKit;
 			path = ../ShapeKit;
@@ -302,7 +310,7 @@
 				9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */,
 				9AA01760198511BD001A0666 /* ProgressView.m in Sources */,
 				9AA0173A19851133001A0666 /* AppDelegate.m in Sources */,
-				9AA01761198511BD001A0666 /* ShapedView.m in Sources */,
+				9AA01761198511BD001A0666 /* ShapeView.m in Sources */,
 				9AA0173619851133001A0666 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AA0174F19851133001A0666 /* ShapeKitExampleTests.m in Sources */,
+				9A20D58E198E0C47005D0F7D /* ShapedViewPathTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

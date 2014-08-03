@@ -77,12 +77,24 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" id="7hU-CG-Upi" customClass="ProgressView">
+                                <rect key="frame" x="185" y="145" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="8a1-7M-sPo" customClass="ProgressView">
+                                <rect key="frame" x="20" y="98" width="280" height="17"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ur2-wQ-DZW"/>
                     <connections>
+                        <outlet property="infiniteProgressView" destination="7hU-CG-Upi" id="yAu-P2-gja"/>
                         <outlet property="progressView" destination="FfU-P2-OF8" id="6K7-z6-Eq2"/>
+                        <outlet property="simpleProgressView" destination="8a1-7M-sPo" id="ZWN-fj-1d8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Anc-Hm-pDW" userLabel="First Responder" sceneMemberID="firstResponder"/>

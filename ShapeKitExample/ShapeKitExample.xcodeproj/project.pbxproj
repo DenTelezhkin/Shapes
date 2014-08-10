@@ -10,6 +10,8 @@
 		9A20D58E198E0C47005D0F7D /* ShapedViewPathTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A20D58D198E0C47005D0F7D /* ShapedViewPathTestCase.m */; };
 		9A5DF42719854B200034FF62 /* ShapeKitExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5DF42619854B200034FF62 /* ShapeKitExample.storyboard */; };
 		9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DF429198562C80034FF62 /* ProgressViewController.m */; };
+		9A79790919974B2300E43B41 /* PathConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79790819974B2300E43B41 /* PathConverter.m */; };
+		9A79790D19974D1700E43B41 /* DimmingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79790C19974D1700E43B41 /* DimmingViewController.m */; };
 		9AA0172A19851133001A0666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0172919851133001A0666 /* Foundation.framework */; };
 		9AA0172C19851133001A0666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0172B19851133001A0666 /* CoreGraphics.framework */; };
 		9AA0172E19851133001A0666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0172D19851133001A0666 /* UIKit.framework */; };
@@ -41,6 +43,10 @@
 		9A5DF42619854B200034FF62 /* ShapeKitExample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShapeKitExample.storyboard; sourceTree = "<group>"; };
 		9A5DF428198562C80034FF62 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressViewController.h; path = Controllers/ProgressViewController.h; sourceTree = "<group>"; };
 		9A5DF429198562C80034FF62 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressViewController.m; path = Controllers/ProgressViewController.m; sourceTree = "<group>"; };
+		9A79790719974B2300E43B41 /* PathConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathConverter.h; sourceTree = "<group>"; };
+		9A79790819974B2300E43B41 /* PathConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathConverter.m; sourceTree = "<group>"; };
+		9A79790B19974D1700E43B41 /* DimmingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DimmingViewController.h; path = Controllers/DimmingViewController.h; sourceTree = "<group>"; };
+		9A79790C19974D1700E43B41 /* DimmingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DimmingViewController.m; path = Controllers/DimmingViewController.m; sourceTree = "<group>"; };
 		9AA0172619851133001A0666 /* ShapeKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA0172919851133001A0666 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AA0172B19851133001A0666 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -105,6 +111,24 @@
 			name = Progress;
 			sourceTree = "<group>";
 		};
+		9A79790619974AF300E43B41 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9A79790719974B2300E43B41 /* PathConverter.h */,
+				9A79790819974B2300E43B41 /* PathConverter.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		9A79790A19974C7D00E43B41 /* Dimming */ = {
+			isa = PBXGroup;
+			children = (
+				9A79790B19974D1700E43B41 /* DimmingViewController.h */,
+				9A79790C19974D1700E43B41 /* DimmingViewController.m */,
+			);
+			name = Dimming;
+			sourceTree = "<group>";
+		};
 		9AA0171D19851133001A0666 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +166,7 @@
 				9AA0173819851133001A0666 /* AppDelegate.h */,
 				9AA0173919851133001A0666 /* AppDelegate.m */,
 				9A5DF42619854B200034FF62 /* ShapeKitExample.storyboard */,
+				9A79790A19974C7D00E43B41 /* Dimming */,
 				9A5DF42B198562CD0034FF62 /* Progress */,
 				9AA0173B19851133001A0666 /* Images.xcassets */,
 				9AA0173019851133001A0666 /* Supporting Files */,
@@ -181,6 +206,7 @@
 		9AA01758198511BD001A0666 /* ShapeKit */ = {
 			isa = PBXGroup;
 			children = (
+				9A79790619974AF300E43B41 /* Helpers */,
 				9AA01759198511BD001A0666 /* DimmedView.h */,
 				9AA0175A198511BD001A0666 /* DimmedView.m */,
 				9AA0175B198511BD001A0666 /* ProgressView.h */,
@@ -310,7 +336,9 @@
 				9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */,
 				9AA01760198511BD001A0666 /* ProgressView.m in Sources */,
 				9AA0173A19851133001A0666 /* AppDelegate.m in Sources */,
+				9A79790919974B2300E43B41 /* PathConverter.m in Sources */,
 				9AA01761198511BD001A0666 /* ShapeView.m in Sources */,
+				9A79790D19974D1700E43B41 /* DimmingViewController.m in Sources */,
 				9AA0173619851133001A0666 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

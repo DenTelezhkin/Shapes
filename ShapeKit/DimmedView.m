@@ -7,6 +7,12 @@
 //
 
 #import "DimmedView.h"
+#import "PathConverter.h"
+
+@interface DimmedView()
+@property (nonatomic, strong) CAShapeLayer * fillLayer;
+
+@end
 
 @implementation DimmedView
 
@@ -14,6 +20,15 @@
 {
     self.opacity = 0.9;
     self.dimmingColor = [UIColor blackColor];
+}
+
+-(UIBezierPath *)dimmedPath
+{
+    if (!_dimmedPath)
+    {
+        _dimmedPath = [UIBezierPath bezierPathWithRect:self.bounds];
+    }
+    return _dimmedPath;
 }
 
 -(instancetype)initWithFrame:(CGRect)frame
@@ -34,19 +49,30 @@
     return self;
 }
 
--(void)makeVisiblePath:(UIBezierPath *)visiblePath dimmedPath:(UIBezierPath *)dimmedPath
+-(void)setVisiblePath:(UIBezierPath *)visiblePath
 {
-    [visiblePath setUsesEvenOddFillRule:YES];
+    _visiblePath = visiblePath;
+    [self updatePathsWithVisiblePath:visiblePath];
+}
+
+-(void)updatePathsWithVisiblePath:(UIBezierPath *)visiblePath
+{
+    [self.fillLayer removeFromSuperlayer];
+    
+    visiblePath.usesEvenOddFillRule = YES;
+    
+    UIBezierPath * dimmedPath = [UIBezierPath bezierPathWithCGPath:self.dimmedPath.CGPath];
     
     [dimmedPath appendPath:visiblePath];
-    [dimmedPath setUsesEvenOddFillRule:YES];
+    dimmedPath.usesEvenOddFillRule = YES;
     
-    CAShapeLayer *fillLayer = [CAShapeLayer layer];
-    fillLayer.path = dimmedPath.CGPath;
-    fillLayer.fillRule = kCAFillRuleEvenOdd;
-    fillLayer.fillColor = self.dimmingColor.CGColor;
-    fillLayer.opacity = self.opacity;
-    [self.layer addSublayer:fillLayer];
+    self.fillLayer = [CAShapeLayer layer];
+    self.fillLayer.path = dimmedPath.CGPath;
+    self.fillLayer.fillRule = kCAFillRuleEvenOdd;
+    self.fillLayer.fillColor = self.dimmingColor.CGColor;
+    self.fillLayer.opacity = self.opacity;
+    
+    [self.layer addSublayer:self.fillLayer];
 }
 
 @end

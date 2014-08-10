@@ -34,13 +34,25 @@
                                             <segue destination="8wJ-Kq-bLN" kind="push" id="MRg-o0-kmm"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wgd-UI-Gkv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wgd-UI-Gkv">
                                         <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wgd-UI-Gkv" id="tzo-i6-OWL">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dimmed view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FzA-Ph-6vk">
+                                                    <rect key="frame" x="20" y="11" width="104" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Zal-ns-NAw" kind="push" id="E8A-lh-viT"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="12w-xr-A7f">
                                         <rect key="frame" x="0.0" y="152" width="320" height="44"/>
@@ -63,6 +75,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJm-hO-3Zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="444" y="59"/>
+        </scene>
+        <!--Dimming View Controller-->
+        <scene sceneID="OSU-HM-GSE">
+            <objects>
+                <viewController id="Zal-ns-NAw" customClass="DimmingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GnV-H6-rTI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat_selfie" id="Y7t-co-yji">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aun-A6-xJo" appends="YES" id="bzV-0W-iZp"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="x2x-fg-rNP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mEu-4J-8Nk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="aun-A6-xJo">
+                    <connections>
+                        <action selector="panGestureMoved:" destination="Zal-ns-NAw" id="JlZ-mx-voz"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="997" y="189"/>
         </scene>
         <!--Progress View Controller-->
         <scene sceneID="Eke-j8-GCZ">
@@ -105,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Anc-Hm-pDW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="53"/>
+            <point key="canvasLocation" x="997" y="-502"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VnE-aa-cMh">
@@ -123,6 +165,9 @@
             <point key="canvasLocation" x="-90" y="59"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat_selfie" width="320" height="568"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

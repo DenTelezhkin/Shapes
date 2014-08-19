@@ -21,7 +21,6 @@
 }
 
 - (BOOL)shouldForwardSelector:(SEL)aSelector {
-    NSLog(@"should forward selector: %@",NSStringFromSelector(aSelector));
     return (![[self.layer superclass] instancesRespondToSelector:aSelector] &&
             [self.layer respondsToSelector:aSelector]);
 }

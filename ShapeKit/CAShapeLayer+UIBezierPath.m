@@ -62,6 +62,8 @@
     path.lineCapStyle = [[[[self class] dt_lineCaps] objectForKey:self.lineCap] intValue];
     path.lineJoinStyle = [[[[self class] dt_lineCaps] objectForKey:self.lineJoin] intValue];
     
+    path.usesEvenOddFillRule = (self.fillRule == kCAFillRuleEvenOdd);
+    
     CGFloat phase = self.lineDashPhase;
     NSInteger count = self.lineDashPattern.count;
     CGFloat pattern[count];

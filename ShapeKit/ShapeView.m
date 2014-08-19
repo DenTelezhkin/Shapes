@@ -7,7 +7,8 @@
 //
 
 #import "ShapeView.h"
-#import "PathConverter.h"
+#import "CAShapeLayer+UIBezierPath.h"
+
 @implementation ShapeView
 
 +(Class)layerClass
@@ -32,8 +33,7 @@
 -(void)setPath:(UIBezierPath *)path
 {
     _path = path;
-    [PathConverter updateShapeLayer:self.shapeLayer
-                     withBezierPath:path];
+    [self.shapeLayer dt_updateWithBezierPath:path];
 }
 
 -(void)setFillColor:(UIColor *)fillColor
@@ -63,6 +63,13 @@
     }
     
     return action;
+}
+
+#pragma mark - hit testing
+
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    BOOL inside = [super pointInside:point withEvent:event];
+    return self.hitTestInsidePath ? [self.path containsPoint:point] && inside : inside;
 }
 
 @end

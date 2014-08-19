@@ -7,7 +7,7 @@
 //
 
 #import "DimmedView.h"
-#import "PathConverter.h"
+#import "CAShapeLayer+UIBezierPath.h"
 
 @interface DimmedView()
 @property (nonatomic, strong) CAShapeLayer * fillLayer;

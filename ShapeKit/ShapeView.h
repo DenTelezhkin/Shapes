@@ -17,4 +17,6 @@
 
 @property (nonatomic, strong) UIColor * strokeColor;
 
+@property (nonatomic, assign) BOOL hitTestInsidePath;
+
 @end

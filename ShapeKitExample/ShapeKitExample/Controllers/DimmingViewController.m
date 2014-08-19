@@ -16,7 +16,6 @@
 
 @implementation DimmingViewController
 
-
 -(void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,6 +36,5 @@
     self.dimmingDynamicView.visiblePath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(location.x-50, location.y-50,
                                                                                             100, 100)];
 }
-
 
 @end

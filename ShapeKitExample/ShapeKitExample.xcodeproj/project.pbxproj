@@ -26,6 +26,7 @@
 		9AA0175F198511BD001A0666 /* DimmedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175A198511BD001A0666 /* DimmedView.m */; };
 		9AA01760198511BD001A0666 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175C198511BD001A0666 /* ProgressView.m */; };
 		9AA01761198511BD001A0666 /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175E198511BD001A0666 /* ShapeView.m */; };
+		9AC46282199CD547006C54E0 /* ImplicitAnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC46281199CD547006C54E0 /* ImplicitAnimationsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		9AA0175C198511BD001A0666 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		9AA0175D198511BD001A0666 /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
 		9AA0175E198511BD001A0666 /* ShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeView.m; sourceTree = "<group>"; };
+		9AC46280199CD547006C54E0 /* ImplicitAnimationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImplicitAnimationsViewController.h; path = Controllers/ImplicitAnimationsViewController.h; sourceTree = "<group>"; };
+		9AC46281199CD547006C54E0 /* ImplicitAnimationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImplicitAnimationsViewController.m; path = Controllers/ImplicitAnimationsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,7 @@
 				9A5DF42619854B200034FF62 /* ShapeKitExample.storyboard */,
 				9A79790A19974C7D00E43B41 /* Dimming */,
 				9A5DF42B198562CD0034FF62 /* Progress */,
+				9AC4627F199CD526006C54E0 /* Compositable */,
 				9AA0173B19851133001A0666 /* Images.xcassets */,
 				9AA0173019851133001A0666 /* Supporting Files */,
 			);
@@ -216,6 +220,15 @@
 			);
 			name = ShapeKit;
 			path = ../ShapeKit;
+			sourceTree = "<group>";
+		};
+		9AC4627F199CD526006C54E0 /* Compositable */ = {
+			isa = PBXGroup;
+			children = (
+				9AC46280199CD547006C54E0 /* ImplicitAnimationsViewController.h */,
+				9AC46281199CD547006C54E0 /* ImplicitAnimationsViewController.m */,
+			);
+			name = Compositable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +348,7 @@
 				9AA0175F198511BD001A0666 /* DimmedView.m in Sources */,
 				9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */,
 				9AA01760198511BD001A0666 /* ProgressView.m in Sources */,
+				9AC46282199CD547006C54E0 /* ImplicitAnimationsViewController.m in Sources */,
 				9AA0173A19851133001A0666 /* AppDelegate.m in Sources */,
 				9A79790919974B2300E43B41 /* PathConverter.m in Sources */,
 				9AA01761198511BD001A0666 /* ShapeView.m in Sources */,

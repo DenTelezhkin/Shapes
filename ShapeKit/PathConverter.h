@@ -13,5 +13,4 @@
 +(void)updateShapeLayer:(CAShapeLayer *)shapeLayer
          withBezierPath:(UIBezierPath *)path;
 
-
 @end

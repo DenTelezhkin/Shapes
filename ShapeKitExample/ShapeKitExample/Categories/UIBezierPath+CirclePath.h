@@ -12,4 +12,6 @@
 
 +(instancetype)dt_bezierPathWithOvalInRect:(CGRect)rect splitInParts:(NSInteger)numberOfParts;
 
++(instancetype)dt_bezierPathWithPartialDrawingInRoundedRect:(CGRect)rect cornerRadius:(CGFloat)radius;
+
 @end

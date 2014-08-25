@@ -58,12 +58,12 @@
 -(UIBezierPath *)downloadingPath
 {
     return [UIBezierPath dt_bezierPathWithOvalInRect:self.bounds
-                                        splitInParts:12];
+                                        splitInParts:8];
 }
 
 -(UIBezierPath *)defaultPath
 {
-    return [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:5.0f];
+    return [UIBezierPath dt_bezierPathWithPartialDrawingInRoundedRect:self.bounds cornerRadius:5.0f];
 }
 
 -(void)setHighlighted:(BOOL)highlighted

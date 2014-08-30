@@ -6,10 +6,8 @@
 //  Copyright (c) 2014 Denys Telezhkin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ShapedButton.h"
 
-@interface DownloadButton : UIButton
-
-@property (nonatomic, assign, getter = isDownloading) BOOL downloading;
+@interface HighlightableShapedButton : ShapedButton
 
 @end

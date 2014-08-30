@@ -11,6 +11,8 @@
 
 @implementation ShapeView
 
+@dynamic fillRule, strokeStart, strokeEnd, lineWidth, miterLimit, lineCap, lineJoin, lineDashPhase, lineDashPattern;
+
 +(Class)layerClass
 {
     return [CAShapeLayer class];

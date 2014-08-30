@@ -26,10 +26,11 @@
 		9AA0175F198511BD001A0666 /* DimmedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175A198511BD001A0666 /* DimmedView.m */; };
 		9AA01760198511BD001A0666 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175C198511BD001A0666 /* ProgressView.m */; };
 		9AA01761198511BD001A0666 /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175E198511BD001A0666 /* ShapeView.m */; };
+		9AA0296219B1E91D0097AAE2 /* ShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0296119B1E91D0097AAE2 /* ShapedButton.m */; };
+		9AA0296519B1F9FC0097AAE2 /* DimmableShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0296419B1F9FC0097AAE2 /* DimmableShapedButton.m */; };
 		9AC46282199CD547006C54E0 /* ImplicitAnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC46281199CD547006C54E0 /* ImplicitAnimationsViewController.m */; };
 		9AD1E75919ABA84800576928 /* AnimatedShapesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1E75819ABA84800576928 /* AnimatedShapesViewController.m */; };
-		9AD1E76119ABAD8000576928 /* DownloadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1E76019ABAD8000576928 /* DownloadButton.m */; };
-		9AD1E76519ABC62E00576928 /* UIBezierPath+CirclePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1E76419ABC62E00576928 /* UIBezierPath+CirclePath.m */; };
+		9AD1E76119ABAD8000576928 /* HighlightableShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1E76019ABAD8000576928 /* HighlightableShapedButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,14 +73,16 @@
 		9AA0175C198511BD001A0666 /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 		9AA0175D198511BD001A0666 /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
 		9AA0175E198511BD001A0666 /* ShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeView.m; sourceTree = "<group>"; };
+		9AA0296019B1E91D0097AAE2 /* ShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapedButton.h; sourceTree = "<group>"; };
+		9AA0296119B1E91D0097AAE2 /* ShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapedButton.m; sourceTree = "<group>"; };
+		9AA0296319B1F9FC0097AAE2 /* DimmableShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DimmableShapedButton.h; path = Controls/DimmableShapedButton.h; sourceTree = "<group>"; };
+		9AA0296419B1F9FC0097AAE2 /* DimmableShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DimmableShapedButton.m; path = Controls/DimmableShapedButton.m; sourceTree = "<group>"; };
 		9AC46280199CD547006C54E0 /* ImplicitAnimationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImplicitAnimationsViewController.h; path = Controllers/ImplicitAnimationsViewController.h; sourceTree = "<group>"; };
 		9AC46281199CD547006C54E0 /* ImplicitAnimationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImplicitAnimationsViewController.m; path = Controllers/ImplicitAnimationsViewController.m; sourceTree = "<group>"; };
 		9AD1E75719ABA84800576928 /* AnimatedShapesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimatedShapesViewController.h; path = Controllers/AnimatedShapesViewController.h; sourceTree = "<group>"; };
 		9AD1E75819ABA84800576928 /* AnimatedShapesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimatedShapesViewController.m; path = Controllers/AnimatedShapesViewController.m; sourceTree = "<group>"; };
-		9AD1E75F19ABAD8000576928 /* DownloadButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadButton.h; path = Controls/DownloadButton.h; sourceTree = "<group>"; };
-		9AD1E76019ABAD8000576928 /* DownloadButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadButton.m; path = Controls/DownloadButton.m; sourceTree = "<group>"; };
-		9AD1E76319ABC62E00576928 /* UIBezierPath+CirclePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBezierPath+CirclePath.h"; path = "Categories/UIBezierPath+CirclePath.h"; sourceTree = "<group>"; };
-		9AD1E76419ABC62E00576928 /* UIBezierPath+CirclePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBezierPath+CirclePath.m"; path = "Categories/UIBezierPath+CirclePath.m"; sourceTree = "<group>"; };
+		9AD1E75F19ABAD8000576928 /* HighlightableShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighlightableShapedButton.h; path = Controls/HighlightableShapedButton.h; sourceTree = "<group>"; };
+		9AD1E76019ABAD8000576928 /* HighlightableShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighlightableShapedButton.m; path = Controls/HighlightableShapedButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +178,6 @@
 		9AA0172F19851133001A0666 /* ShapeKitExample */ = {
 			isa = PBXGroup;
 			children = (
-				9AD1E76219ABC60A00576928 /* Categories */,
 				9AA0173819851133001A0666 /* AppDelegate.h */,
 				9AA0173919851133001A0666 /* AppDelegate.m */,
 				9A5DF42619854B200034FF62 /* ShapeKitExample.storyboard */,
@@ -221,6 +223,7 @@
 		9AA01758198511BD001A0666 /* ShapeKit */ = {
 			isa = PBXGroup;
 			children = (
+				9AA0295F19B1E9010097AAE2 /* Controls */,
 				9A9BA46119A3990D0068E1EF /* Categories */,
 				9AA01759198511BD001A0666 /* DimmedView.h */,
 				9AA0175A198511BD001A0666 /* DimmedView.m */,
@@ -231,6 +234,15 @@
 			);
 			name = ShapeKit;
 			path = ../ShapeKit;
+			sourceTree = "<group>";
+		};
+		9AA0295F19B1E9010097AAE2 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				9AA0296019B1E91D0097AAE2 /* ShapedButton.h */,
+				9AA0296119B1E91D0097AAE2 /* ShapedButton.m */,
+			);
+			name = Controls;
 			sourceTree = "<group>";
 		};
 		9AC4627F199CD526006C54E0 /* Compositable */ = {
@@ -255,19 +267,12 @@
 		9AD1E75E19ABAD3B00576928 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				9AD1E75F19ABAD8000576928 /* DownloadButton.h */,
-				9AD1E76019ABAD8000576928 /* DownloadButton.m */,
+				9AD1E75F19ABAD8000576928 /* HighlightableShapedButton.h */,
+				9AD1E76019ABAD8000576928 /* HighlightableShapedButton.m */,
+				9AA0296319B1F9FC0097AAE2 /* DimmableShapedButton.h */,
+				9AA0296419B1F9FC0097AAE2 /* DimmableShapedButton.m */,
 			);
 			name = Buttons;
-			sourceTree = "<group>";
-		};
-		9AD1E76219ABC60A00576928 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				9AD1E76319ABC62E00576928 /* UIBezierPath+CirclePath.h */,
-				9AD1E76419ABC62E00576928 /* UIBezierPath+CirclePath.m */,
-			);
-			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,12 +392,13 @@
 				9AA0175F198511BD001A0666 /* DimmedView.m in Sources */,
 				9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */,
 				9AA01760198511BD001A0666 /* ProgressView.m in Sources */,
+				9AA0296519B1F9FC0097AAE2 /* DimmableShapedButton.m in Sources */,
 				9AD1E75919ABA84800576928 /* AnimatedShapesViewController.m in Sources */,
 				9AC46282199CD547006C54E0 /* ImplicitAnimationsViewController.m in Sources */,
 				9AA0173A19851133001A0666 /* AppDelegate.m in Sources */,
-				9AD1E76519ABC62E00576928 /* UIBezierPath+CirclePath.m in Sources */,
 				9AA01761198511BD001A0666 /* ShapeView.m in Sources */,
-				9AD1E76119ABAD8000576928 /* DownloadButton.m in Sources */,
+				9AD1E76119ABAD8000576928 /* HighlightableShapedButton.m in Sources */,
+				9AA0296219B1E91D0097AAE2 /* ShapedButton.m in Sources */,
 				9A79790D19974D1700E43B41 /* DimmingViewController.m in Sources */,
 				9AA0173619851133001A0666 /* main.m in Sources */,
 				9A9BA46419A3992F0068E1EF /* CAShapeLayer+UIBezierPath.m in Sources */,

@@ -12,10 +12,6 @@
 
 @property (nonatomic, assign, readonly) float progress;
 
-@property (nonatomic, assign, readonly) float strokeStart;
-
-@property (nonatomic, assign, readonly) float strokeEnd;
-
 /**
  Duration of an animated progress change.
  

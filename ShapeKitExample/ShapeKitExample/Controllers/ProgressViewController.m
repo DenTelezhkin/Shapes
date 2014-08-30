@@ -60,7 +60,6 @@
     UIBezierPath * path = [UIBezierPath bezierPathWithOvalInRect:circleRect];
     path.lineWidth = 1;
     self.infiniteProgressView.path = path;
-    [self.infiniteProgressView setStrokeStart:0 animated:NO];
     [self.infiniteProgressView setStrokeEnd:0.85 animated:NO];
     
     CABasicAnimation *spinAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];

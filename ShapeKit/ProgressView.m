@@ -55,7 +55,7 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
 
 -(float)progress
 {
-    return _strokeEnd;
+    return self.strokeEnd;
 }
 
 - (void)setProgress:(float)progress animated:(BOOL)animated
@@ -83,7 +83,7 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
     else {
         [self.layer removeAnimationForKey:kStrokeStartAnimationKey];
         self.shapeLayer.strokeStart = strokeStart;
-        _strokeStart = strokeStart;
+        self.strokeStart = strokeStart;
     }
 }
 
@@ -98,13 +98,13 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
     else {
         [self.layer removeAnimationForKey:kStrokeEndAnimationKey];
         self.shapeLayer.strokeEnd = end;
-        _strokeEnd = end;
+        self.strokeEnd = end;
     }
 }
 
 -(void)animateStrokeStart:(float)start
 {
-    float fromValue = _strokeStart;
+    float fromValue = self.strokeStart;
     
     if ( [self.shapeLayer animationForKey:kStrokeStartAnimationKey]!=nil)
     {
@@ -124,12 +124,12 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
     animation.removedOnCompletion = YES;
     
     [self.shapeLayer addAnimation:animation forKey:kStrokeStartAnimationKey];
-    _strokeStart = start;
+    self.strokeStart = start;
 }
 
 -(void)animateStrokeEnd:(float)end
 {
-    float fromValue = _strokeEnd;
+    float fromValue = self.strokeEnd;
     
     if ( [self.shapeLayer animationForKey:kStrokeEndAnimationKey]!=nil)
     {
@@ -149,7 +149,7 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
     animation.removedOnCompletion = YES;
     
     [self.shapeLayer addAnimation:animation forKey:kStrokeEndAnimationKey];
-    _strokeEnd = end;
+    self.strokeEnd = end;
 }
 
 - (void)animateToProgress:(float)progress

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="121-Wy-hHe">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -141,13 +142,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d9l-a5-fGg" customClass="DownloadButton">
-                                <rect key="frame" x="131" y="219" width="104" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d9l-a5-fGg" customClass="HighlightableShapedButton">
+                                <rect key="frame" x="100" y="220" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="DOWNLOAD"/>
                                 <connections>
                                     <action selector="downloadTapped:" destination="5Gd-cJ-hJw" eventType="touchUpInside" id="aL1-Ix-lR5"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8d6-Xi-bqM" customClass="DimmableShapedButton">
+                                <rect key="frame" x="170" y="220" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="progressButtonTapped:" destination="5Gd-cJ-hJw" eventType="touchUpInside" id="VBL-KJ-kO5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -156,6 +167,7 @@
                     <navigationItem key="navigationItem" title="Animations" id="Q3m-Fc-Vy6"/>
                     <connections>
                         <outlet property="downloadButton" destination="d9l-a5-fGg" id="tdn-aT-xVh"/>
+                        <outlet property="progressButton" destination="8d6-Xi-bqM" id="M7l-ph-KXL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncg-nT-5Xg" userLabel="First Responder" sceneMemberID="firstResponder"/>

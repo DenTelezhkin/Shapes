@@ -6,9 +6,8 @@
 //  Copyright (c) 2014 Denys Telezhkin. All rights reserved.
 //
 
-#import "DownloadButton.h"
+#import "HighlightableShapedButton.h"
 
 @interface AnimatedShapesViewController : UIViewController
-@property (weak, nonatomic) IBOutlet DownloadButton *downloadButton;
 
 @end

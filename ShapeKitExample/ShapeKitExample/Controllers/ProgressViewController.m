@@ -7,13 +7,13 @@
 //
 
 #import "ProgressViewController.h"
-#import "ProgressView.h"
+#import "DTProgressView.h"
 
 @interface ProgressViewController ()
-@property (weak, nonatomic) IBOutlet ProgressView *simpleProgressView;
-@property (weak, nonatomic) IBOutlet ProgressView *progressView;
-@property (weak, nonatomic) IBOutlet ProgressView *infiniteProgressView;
-@property (weak, nonatomic) IBOutlet ProgressView *ellipseProgressView;
+@property (weak, nonatomic) IBOutlet DTProgressView *simpleProgressView;
+@property (weak, nonatomic) IBOutlet DTProgressView *progressView;
+@property (weak, nonatomic) IBOutlet DTProgressView *infiniteProgressView;
+@property (weak, nonatomic) IBOutlet DTProgressView *ellipseProgressView;
 
 @end
 

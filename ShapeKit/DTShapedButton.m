@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Denys Telezhkin. All rights reserved.
 //
 
-#import "ShapedButton.h"
+#import "DTShapedButton.h"
 
-@implementation ShapedButton
+@implementation DTShapedButton
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -30,7 +30,7 @@
 
 -(void)commonSetup
 {
-    ShapeView * buttonShape = [[ShapeView alloc] initWithFrame:self.bounds];
+    DTShapeView * buttonShape = [[DTShapeView alloc] initWithFrame:self.bounds];
     UIBezierPath * path = [UIBezierPath bezierPathWithRect:self.bounds];
     buttonShape.path = path;
     

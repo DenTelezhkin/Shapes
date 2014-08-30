@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import "ShapeView.h"
+#import "DTShapeView.h"
 
-@interface DimmedView : ShapeView
+@interface DTDimmedView : DTShapeView
 
 @property (nonatomic, strong) UIBezierPath * visiblePath;
 @property (nonatomic, strong) UIBezierPath * dimmedPath;

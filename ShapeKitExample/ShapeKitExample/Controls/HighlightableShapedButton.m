@@ -7,7 +7,7 @@
 //
 
 #import "HighlightableShapedButton.h"
-#import "ShapeView.h"
+#import "DTShapeView.h"
 
 @implementation HighlightableShapedButton
 

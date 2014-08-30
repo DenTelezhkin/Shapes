@@ -55,28 +55,8 @@
                                             <segue destination="Zal-ns-NAw" kind="push" id="E8A-lh-viT"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="12w-xr-A7f">
-                                        <rect key="frame" x="0.0" y="152" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="12w-xr-A7f" id="Jv1-PT-21s">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Implicit animations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="35z-OZ-wm3">
-                                                    <rect key="frame" x="20" y="11" width="144" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="8by-xP-rVn" kind="push" id="ISr-gO-WBc"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tXP-eD-S9c">
-                                        <rect key="frame" x="0.0" y="196" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="152" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tXP-eD-S9c" id="sfu-dt-yIX">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -96,7 +76,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="naj-pM-x7W">
-                                        <rect key="frame" x="0.0" y="240" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="196" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="naj-pM-x7W" id="FKg-Ns-4g7">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -129,31 +109,6 @@
             </objects>
             <point key="canvasLocation" x="444" y="59"/>
         </scene>
-        <!--Implicit Animations View Controller - Implicit animations-->
-        <scene sceneID="wSi-fT-iwT">
-            <objects>
-                <viewController id="8by-xP-rVn" customClass="ImplicitAnimationsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UE5-YP-Kht">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="4iU-cV-un0" customClass="ShapeView">
-                                <rect key="frame" x="91" y="217" width="138" height="133"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Implicit animations" id="eDw-af-hBc"/>
-                    <connections>
-                        <outlet property="roundShape" destination="4iU-cV-un0" id="F9C-lL-j3q"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s97-oX-MG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="969" y="380"/>
-        </scene>
         <!--Voice Memos Record Button View Controller - VoiceMemos record button-->
         <scene sceneID="aWF-nH-EMC">
             <objects>
@@ -166,11 +121,11 @@
                                 <rect key="frame" x="110" y="132" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="uWh-bx-LYx" customClass="ShapeView">
+                                    <view contentMode="scaleToFill" id="uWh-bx-LYx" customClass="DTShapeView">
                                         <rect key="frame" x="20" y="20" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qhA-nx-W78" customClass="ShapedButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qhA-nx-W78" customClass="DTShapedButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -198,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ger-tk-Vd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="1047"/>
+            <point key="canvasLocation" x="969" y="391"/>
         </scene>
         <!--Download Button View Controller - AppStore download button-->
         <scene sceneID="pRx-OY-zFW">
@@ -278,22 +233,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="FfU-P2-OF8" customClass="ProgressView">
+                            <view contentMode="scaleToFill" id="FfU-P2-OF8" customClass="DTProgressView">
                                 <rect key="frame" x="35" y="145" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="7hU-CG-Upi" customClass="ProgressView">
+                            <view contentMode="scaleToFill" id="7hU-CG-Upi" customClass="DTProgressView">
                                 <rect key="frame" x="185" y="145" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="8a1-7M-sPo" customClass="ProgressView">
+                            <view contentMode="scaleToFill" id="8a1-7M-sPo" customClass="DTProgressView">
                                 <rect key="frame" x="20" y="98" width="280" height="17"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="BBD-AB-TeX" customClass="ProgressView">
+                            <view contentMode="scaleToFill" id="BBD-AB-TeX" customClass="DTProgressView">
                                 <rect key="frame" x="20" y="253" width="280" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

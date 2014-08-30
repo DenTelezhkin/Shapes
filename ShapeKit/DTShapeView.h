@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShapeView : UIView
+@interface DTShapeView : UIView
 
 @property (nonatomic, strong) UIBezierPath * path;
 @property (nonatomic, strong, readonly) CAShapeLayer * shapeLayer;

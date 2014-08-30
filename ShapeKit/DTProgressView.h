@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import "ShapeView.h"
+#import "DTShapeView.h"
 
-@interface ProgressView : ShapeView
+@interface DTProgressView : DTShapeView
 
 @property (nonatomic, assign, readonly) float progress;
 

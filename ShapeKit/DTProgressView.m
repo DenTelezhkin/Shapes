@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import "ProgressView.h"
+#import "DTProgressView.h"
 
-@interface ProgressView()
+@interface DTProgressView()
 @end
 
-@implementation ProgressView
+@implementation DTProgressView
 
 static NSString * const kStrokeEndAnimationKey = @"Stroke end animation";
 static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";

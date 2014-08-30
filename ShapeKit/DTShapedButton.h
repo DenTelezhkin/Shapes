@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Denys Telezhkin. All rights reserved.
 //
 
-#import "ShapeView.h"
+#import "DTShapeView.h"
 
-@interface ShapedButton : UIButton
+@interface DTShapedButton : UIButton
 
-@property (nonatomic, strong) ShapeView * shape;
+@property (nonatomic, strong) DTShapeView * shape;
 
 @end

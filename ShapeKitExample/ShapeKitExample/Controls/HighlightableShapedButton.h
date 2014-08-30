@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Denys Telezhkin. All rights reserved.
 //
 
-#import "ShapedButton.h"
+#import "DTShapedButton.h"
 
-@interface HighlightableShapedButton : ShapedButton
+@interface HighlightableShapedButton : DTShapedButton
 
 @end

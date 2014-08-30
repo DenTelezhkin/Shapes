@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import "DimmedView.h"
+#import "DTDimmedView.h"
 #import "CAShapeLayer+UIBezierPath.h"
 
-@interface DimmedView()
+@interface DTDimmedView()
 @property (nonatomic, strong) CAShapeLayer * fillLayer;
 
 @end
 
-@implementation DimmedView
+@implementation DTDimmedView
 
 -(void)commonSetup
 {

@@ -7,10 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "ShapeView.h"
+#import "DTShapeView.h"
 
 @interface ShapedViewPathTestCase : XCTestCase
-@property (nonatomic, strong) ShapeView * view;
+@property (nonatomic, strong) DTShapeView * view;
 
 @end
 
@@ -27,7 +27,7 @@
     path.miterLimit = 6;
     path.usesEvenOddFillRule = YES;
     
-    self.view = [ShapeView new];
+    self.view = [DTShapeView new];
     [self.view setPath:path];
 }
 

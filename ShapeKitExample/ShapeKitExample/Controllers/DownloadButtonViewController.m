@@ -9,7 +9,7 @@
 #import "DownloadButtonViewController.h"
 
 @interface DownloadButtonViewController()
-@property (weak, nonatomic) IBOutlet ShapedButton *progressButton;
+@property (weak, nonatomic) IBOutlet DTShapedButton *progressButton;
 @property (weak, nonatomic) IBOutlet HighlightableShapedButton *downloadButton;
 @end
 

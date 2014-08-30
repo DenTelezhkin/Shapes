@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 MLSDev. All rights reserved.
 //
 
-#import "ShapeView.h"
+#import "DTShapeView.h"
 #import "CAShapeLayer+UIBezierPath.h"
 
-@implementation ShapeView
+@implementation DTShapeView
 
 @dynamic fillRule, strokeStart, strokeEnd, lineWidth, miterLimit, lineCap, lineJoin, lineDashPhase, lineDashPattern;
 

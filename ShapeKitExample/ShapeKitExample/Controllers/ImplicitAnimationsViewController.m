@@ -25,9 +25,9 @@
     self.roundShape.path = roundPath;
     self.roundShape.strokeColor = [UIColor grayColor];
     self.roundShape.fillColor = [UIColor clearColor];
-    self.roundShape.shapeLayer.strokeEnd = 0;
+    self.roundShape.strokeEnd = 0;
     [UIView animateWithDuration:5 animations:^{
-        self.roundShape.shapeLayer.strokeEnd = 1;
+        self.roundShape.strokeEnd = 1;
     }];
 }
 

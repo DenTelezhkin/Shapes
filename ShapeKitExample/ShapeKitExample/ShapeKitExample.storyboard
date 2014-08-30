@@ -82,8 +82,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r0B-WV-krz">
-                                                    <rect key="frame" x="20" y="11" width="86" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppStore download button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r0B-WV-krz">
+                                                    <rect key="frame" x="20" y="11" width="208" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -93,6 +93,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="5Gd-cJ-hJw" kind="push" id="ezs-lG-eZV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="naj-pM-x7W">
+                                        <rect key="frame" x="0.0" y="240" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="naj-pM-x7W" id="FKg-Ns-4g7">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice memos record button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MiP-sJ-MlS">
+                                                    <rect key="frame" x="20" y="11" width="212" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="36Z-If-t9d" kind="push" id="MOB-A7-qxi"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -109,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="444" y="59"/>
         </scene>
-        <!--Implicit Animations View Controller - Composited shapes-->
+        <!--Implicit Animations View Controller - Implicit animations-->
         <scene sceneID="wSi-fT-iwT">
             <objects>
                 <viewController id="8by-xP-rVn" customClass="ImplicitAnimationsViewController" sceneMemberID="viewController">
@@ -125,7 +145,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Composited shapes" id="eDw-af-hBc"/>
+                    <navigationItem key="navigationItem" title="Implicit animations" id="eDw-af-hBc"/>
                     <connections>
                         <outlet property="roundShape" destination="4iU-cV-un0" id="F9C-lL-j3q"/>
                     </connections>
@@ -134,10 +154,56 @@
             </objects>
             <point key="canvasLocation" x="969" y="380"/>
         </scene>
-        <!--Animated Shapes View Controller - Animations-->
+        <!--Voice Memos Record Button View Controller - VoiceMemos record button-->
+        <scene sceneID="aWF-nH-EMC">
+            <objects>
+                <viewController id="36Z-If-t9d" customClass="VoiceMemosRecordButtonViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fI7-81-3fp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="aov-KK-Ici">
+                                <rect key="frame" x="110" y="132" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="uWh-bx-LYx" customClass="ShapeView">
+                                        <rect key="frame" x="20" y="20" width="60" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qhA-nx-W78" customClass="ShapedButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="recordTapped:" destination="36Z-If-t9d" eventType="touchUpInside" id="b1g-zT-hhT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="VoiceMemos record button" id="KSH-SW-x3q"/>
+                    <connections>
+                        <outlet property="recordButton" destination="qhA-nx-W78" id="qBT-6C-PxF"/>
+                        <outlet property="whiteShapeView" destination="uWh-bx-LYx" id="aE8-SX-u2E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ger-tk-Vd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="1047"/>
+        </scene>
+        <!--Download Button View Controller - AppStore download button-->
         <scene sceneID="pRx-OY-zFW">
             <objects>
-                <viewController id="5Gd-cJ-hJw" customClass="AnimatedShapesViewController" sceneMemberID="viewController">
+                <viewController id="5Gd-cJ-hJw" customClass="DownloadButtonViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t1Y-4T-kFt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -164,7 +230,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Animations" id="Q3m-Fc-Vy6"/>
+                    <navigationItem key="navigationItem" title="AppStore download button" id="Q3m-Fc-Vy6"/>
                     <connections>
                         <outlet property="downloadButton" destination="d9l-a5-fGg" id="tdn-aT-xVh"/>
                         <outlet property="progressButton" destination="8d6-Xi-bqM" id="M7l-ph-KXL"/>

@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Denys Telezhkin. All rights reserved.
 //
 
-#import "AnimatedShapesViewController.h"
+#import "DownloadButtonViewController.h"
 
-@interface AnimatedShapesViewController()
+@interface DownloadButtonViewController()
 @property (weak, nonatomic) IBOutlet ShapedButton *progressButton;
 @property (weak, nonatomic) IBOutlet HighlightableShapedButton *downloadButton;
 @end
 
-@implementation AnimatedShapesViewController
+@implementation DownloadButtonViewController
 
 -(void)viewDidLoad
 {

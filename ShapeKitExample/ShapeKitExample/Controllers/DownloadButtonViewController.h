@@ -8,6 +8,6 @@
 
 #import "HighlightableShapedButton.h"
 
-@interface AnimatedShapesViewController : UIViewController
+@interface DownloadButtonViewController : UIViewController
 
 @end

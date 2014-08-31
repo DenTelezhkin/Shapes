@@ -37,12 +37,12 @@
     [self.downloadButton setTitle:@"" forState:UIControlStateNormal];
     [UIView animateWithDuration:0.25
                      animations:^{
-                         CGRect frame = CGRectMake(self.downloadButton.frame.origin.x - self.progressButton.frame.size.width,
+                         CGRect frame = CGRectMake(self.downloadButton.frame.origin.x - self.progressButton.frame.size.width-5,
                                                    0,
-                                                   self.progressButton.frame.size.width,
+                                                   self.progressButton.frame.size.width+5,
                                                    self.progressButton.frame.size.height);
                          self.downloadButton.shape.path = [UIBezierPath bezierPathWithRoundedRect:frame
-                                                                                     cornerRadius:self.progressButton.frame.size.height/2];
+                                                                                     cornerRadius:10.0];
                      } completion:^(BOOL finished) {
                          self.downloadButton.hidden = YES;
                          self.progressButton.hidden = NO;

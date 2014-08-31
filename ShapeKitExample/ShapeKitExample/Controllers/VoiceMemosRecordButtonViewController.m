@@ -34,6 +34,35 @@
 - (IBAction)recordTapped:(id)sender
 {
     self.isRecording = !self.isRecording;
+
+//    UIBezierPath * fromPath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(self.recordButton.frame, 0, 0)
+//                                                         cornerRadius:4];
+//    UIBezierPath * toPath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(self.recordButton.frame, 18, 18)
+//                                                       cornerRadius:4];
+//    CAShapeLayer * maskLayer = [CAShapeLayer layer];
+//    
+//    
+//    CABasicAnimation * maskAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
+//    maskAnimation.duration = 0.2;
+//    maskAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//
+//    if (self.isRecording)
+//    {
+//        [maskLayer setPath:[fromPath CGPath]];
+//        maskLayer.path = [toPath CGPath];
+//        self.recordButton.shape.shapeLayer.mask = maskLayer;
+//        maskAnimation.fromValue =(id)[fromPath CGPath];
+//        maskAnimation.toValue = (id)[toPath CGPath];
+//        maskLayer.path = [toPath CGPath];
+//    }
+//    else {
+//        [maskLayer setPath:[fromPath CGPath]];
+//        maskLayer.path = [fromPath CGPath];
+//        self.recordButton.shape.shapeLayer.mask = maskLayer;
+//        maskAnimation.fromValue =(id)[toPath CGPath];
+//        maskAnimation.toValue = (id)[fromPath CGPath];
+//    }
+//    [maskLayer addAnimation:maskAnimation forKey:@"path"];
     
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         if (self.isRecording)
@@ -46,6 +75,7 @@
                                                                       cornerRadius:(self.recordButton.frame.size.width-4)/2];
         }
     } completion:nil];
+
 }
 
 @end

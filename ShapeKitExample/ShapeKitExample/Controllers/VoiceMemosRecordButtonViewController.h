@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DTAnimatableShapeLayer.h"
 
 @interface VoiceMemosRecordButtonViewController : UIViewController
 

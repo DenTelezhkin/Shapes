@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1F569619B34A83003E957E /* DTAnimatableShapeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F569519B34A83003E957E /* DTAnimatableShapeLayer.m */; };
 		9A20D58E198E0C47005D0F7D /* ShapedViewPathTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A20D58D198E0C47005D0F7D /* ShapedViewPathTestCase.m */; };
 		9A5DF42719854B200034FF62 /* ShapeKitExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5DF42619854B200034FF62 /* ShapeKitExample.storyboard */; };
 		9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DF429198562C80034FF62 /* ProgressViewController.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A1F569419B34A83003E957E /* DTAnimatableShapeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAnimatableShapeLayer.h; sourceTree = "<group>"; };
+		9A1F569519B34A83003E957E /* DTAnimatableShapeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTAnimatableShapeLayer.m; sourceTree = "<group>"; };
 		9A20D58D198E0C47005D0F7D /* ShapedViewPathTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShapedViewPathTestCase.m; path = Specs/ShapedView/ShapedViewPathTestCase.m; sourceTree = "<group>"; };
 		9A5DF42619854B200034FF62 /* ShapeKitExample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShapeKitExample.storyboard; sourceTree = "<group>"; };
 		9A5DF428198562C80034FF62 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressViewController.h; path = Controllers/ProgressViewController.h; sourceTree = "<group>"; };
@@ -230,6 +233,8 @@
 				9AA0175C198511BD001A0666 /* DTProgressView.m */,
 				9AA0175D198511BD001A0666 /* DTShapeView.h */,
 				9AA0175E198511BD001A0666 /* DTShapeView.m */,
+				9A1F569419B34A83003E957E /* DTAnimatableShapeLayer.h */,
+				9A1F569519B34A83003E957E /* DTAnimatableShapeLayer.m */,
 			);
 			name = ShapeKit;
 			path = ../ShapeKit;
@@ -382,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AA0175F198511BD001A0666 /* DTDimmedView.m in Sources */,
+				9A1F569619B34A83003E957E /* DTAnimatableShapeLayer.m in Sources */,
 				9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */,
 				9AA01760198511BD001A0666 /* DTProgressView.m in Sources */,
 				9AA0296519B1F9FC0097AAE2 /* DimmableShapedButton.m in Sources */,

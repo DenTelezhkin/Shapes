@@ -1,6 +1,5 @@
 //
 //  ShapedView.m
-//  GeoTourist
 //
 //  Created by Denys Telezhkin on 17.07.14.
 //  Copyright (c) 2014 MLSDev. All rights reserved.
@@ -8,12 +7,13 @@
 
 #import "DTShapeView.h"
 #import "CAShapeLayer+UIBezierPath.h"
+#import "DTGraphicsConverter.h"
 
 @implementation DTShapeView
 
-@dynamic strokeStart, strokeEnd, lineWidth, miterLimit, lineCap, lineJoin, lineDashPhase, lineDashPattern;
+@dynamic strokeStart, strokeEnd, lineWidth, miterLimit, lineDashPhase, lineDashPattern;
 
-@synthesize fillColor = _fillColor, strokeColor = _strokeColor;
+#pragma mark - UIView methods
 
 +(Class)layerClass
 {
@@ -25,6 +25,8 @@
     return (CAShapeLayer*)self.layer;
 }
 
+#pragma mark - method forwarding
+
 - (BOOL)shouldForwardSelector:(SEL)aSelector {
     return (![[self.layer superclass] instancesRespondToSelector:aSelector] &&
             [self.layer respondsToSelector:aSelector]);
@@ -34,6 +36,8 @@
     return (![self respondsToSelector:aSelector] && [self shouldForwardSelector:aSelector]) ? self.layer : self;
 }
 
+#pragma mark - getters and setters 
+
 -(void)setPath:(UIBezierPath *)path
 {
     _path = path;
@@ -42,7 +46,6 @@
 
 -(void)setFillColor:(UIColor *)fillColor
 {
-    _fillColor = fillColor;
     [self.shapeLayer setFillColor:[fillColor CGColor]];
 }
 
@@ -58,7 +61,6 @@
 
 -(void)setStrokeColor:(UIColor *)strokeColor
 {
-    _strokeColor = strokeColor;
     [self.shapeLayer setStrokeColor:[strokeColor CGColor]];
 }
 
@@ -71,6 +73,29 @@
 {
     return self.shapeLayer.fillRule == kCAFillRuleEvenOdd;
 }
+
+-(void)setLineCap:(CGLineCap)lineCap
+{
+    self.shapeLayer.lineCap = [DTGraphicsConverter lineCapFromCGLineCap:lineCap];
+}
+
+-(CGLineCap)lineCap
+{
+    return [DTGraphicsConverter lineCapFromCALineCap:self.shapeLayer.lineCap];
+}
+
+-(void)setLineJoin:(CGLineJoin)lineJoin
+{
+    self.shapeLayer.lineJoin = [DTGraphicsConverter lineJoinFromCGLineJoin:lineJoin];
+}
+
+-(CGLineJoin)lineJoin
+{
+    return [DTGraphicsConverter lineJoinFromCALineJoin:self.shapeLayer.lineJoin];
+}
+
+
+#pragma mark CALayerDelegate protocol
 
 - (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)key {
     id<CAAction> action = [super actionForLayer:layer forKey:key];

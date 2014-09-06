@@ -1,6 +1,5 @@
 //
 //  RoundDimmedView.m
-//  GeoTourist
 //
 //  Created by Denys Telezhkin on 23.07.14.
 //  Copyright (c) 2014 MLSDev. All rights reserved.
@@ -16,11 +15,17 @@
 
 @implementation DTDimmedView
 
--(void)commonSetup
+@synthesize dimmedPath = _dimmedPath;
+
+#pragma mark - appearance
+
++(void)load
 {
-    self.opacity = 0.9;
-    self.dimmingColor = [UIColor blackColor];
+    [self.appearance setDimmingOpacity:0.9];
+    [self.appearance setDimmingColor:[UIColor blackColor]];
 }
+
+#pragma mark - getters and setters
 
 -(UIBezierPath *)dimmedPath
 {
@@ -31,22 +36,10 @@
     return _dimmedPath;
 }
 
--(instancetype)initWithFrame:(CGRect)frame
+-(void)setDimmedPath:(UIBezierPath *)dimmedPath
 {
-    if (self = [super initWithFrame:frame])
-    {
-        [self commonSetup];
-    }
-    return self;
-}
-
--(instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    if (self = [super initWithCoder:aDecoder])
-    {
-        [self commonSetup];
-    }
-    return self;
+    _dimmedPath = dimmedPath;
+    [self updatePathsWithVisiblePath:self.visiblePath];
 }
 
 -(void)setVisiblePath:(UIBezierPath *)visiblePath
@@ -54,6 +47,14 @@
     _visiblePath = visiblePath;
     [self updatePathsWithVisiblePath:visiblePath];
 }
+
+-(void)setDimmingColor:(UIColor *)dimmingColor
+{
+    _dimmingColor = dimmingColor;
+    [self updatePathsWithVisiblePath:self.visiblePath];
+}
+
+#pragma mark - updating visible paths
 
 -(void)updatePathsWithVisiblePath:(UIBezierPath *)visiblePath
 {
@@ -70,7 +71,7 @@
     self.fillLayer.path = dimmedPath.CGPath;
     self.fillLayer.fillRule = kCAFillRuleEvenOdd;
     self.fillLayer.fillColor = self.dimmingColor.CGColor;
-    self.fillLayer.opacity = self.opacity;
+    self.fillLayer.opacity = self.dimmingOpacity;
     
     [self.layer addSublayer:self.fillLayer];
 }

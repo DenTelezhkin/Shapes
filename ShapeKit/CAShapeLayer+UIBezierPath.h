@@ -8,9 +8,19 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+/**
+ Category on `CAShapeLayer`, that allows setting and getting UIBezierPath on CAShapeLayer.
+ */
 @interface CAShapeLayer (UIBezierPath)
 
+/**
+ Update CAShapeLayer with UIBezierPath.
+ */
 - (void)dt_updateWithBezierPath:(UIBezierPath *)path;
+
+/**
+ Get UIBezierPath object, constructed from CAShapeLayer.
+ */
 - (UIBezierPath*)dt_bezierPath;
 
 @end

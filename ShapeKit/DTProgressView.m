@@ -1,6 +1,5 @@
 //
 //  ProgressView.m
-//  GeoTourist
 //
 //  Created by Denys Telezhkin on 17.07.14.
 //  Copyright (c) 2014 MLSDev. All rights reserved.
@@ -30,6 +29,7 @@ static NSString * const kStrokeStartAnimationKey = @"Stroke start animation";
     [self setPath:path];
     
     [self setFillColor:[UIColor clearColor]];
+    self.strokeColor = [UIColor grayColor];
     
     self.shapeLayer.strokeEnd = 0;
     self.shapeLayer.strokeStart = 0;

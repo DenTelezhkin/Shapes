@@ -8,6 +8,9 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+/**
+ `DTAnimatableShapeLayer` allows implicit animation of CAShapeLayer path. It uses CTTransaction animation duration and animation timing function to animate a change.
+ */
 @interface DTAnimatableShapeLayer : CAShapeLayer
 
 @end

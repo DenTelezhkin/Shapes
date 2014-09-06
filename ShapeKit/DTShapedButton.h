@@ -8,8 +8,14 @@
 
 #import "DTShapeView.h"
 
+/**
+ `DTShapedButton` is a UIButton, that has `DTShapedView` added as a sublayer. As a result, it allows manipulating UIButton shape and visual appearance by changing `DTShapedView` properties. By default, button shape is a rectangle with UIButton bounds set as it's frame.
+ */
 @interface DTShapedButton : UIButton
 
+/**
+ `DTShapeView`, added as a sublayer to UIButton's layer. 
+ */
 @property (nonatomic, strong) DTShapeView * shape;
 
 @end

@@ -1,6 +1,5 @@
 //
 //  ShapedView.h
-//  GeoTourist
 //
 //  Created by Denys Telezhkin on 17.07.14.
 //  Copyright (c) 2014 MLSDev. All rights reserved.
@@ -8,6 +7,8 @@
 
 /**
  `DTShapeView` is a UIView subclass, that is backed by CAShapeLayer instead of CALayer. It provides API for changing CAShapeLayer path, fill and stroke colors and other layer properties, basically allowing UIView to behave like geometric shape.
+ 
+ All `DTShapeView` properties are automatically converted to CAShapeLayer properties or use CAShapeLayer properties directly. You can use whatever style you like, but we recommend using UIBezierPath and `DTShapeView` properties, because this allows you to completely bypass CoreFoundation objects. It also allows you to use CoreGraphics API instead of Quartz.
  */
 @interface DTShapeView : UIView
 
@@ -22,36 +23,59 @@
 @property (nonatomic, strong, readonly) CAShapeLayer * shapeLayer;
 
 /**
- Fill color, used by CAShapeLayer.
+ Fill color, used by CAShapeLayer. UIColor is automatically converted to and from CAShapeLayer fillColor property.
  */
 @property (nonatomic, strong) UIColor * fillColor;
 
 /**
- Stroke color, used by CAShapeLayer.
+ Stroke color, used by CAShapeLayer. UIColor is automatically converted to and from CAShapeLayer strokeColor property.
  */
 @property (nonatomic, strong) UIColor * strokeColor;
 
 /**
- Fill rule, used by CAShapeLayer.
+ Fill rule, used by CAShapeLayer. Automatically converts to CAFillRule constant values on CAShapeLayer.
  */
 @property (nonatomic, assign) BOOL usesEvenOddFillRule;
 
+/**
+ These properties use CAShapeLayer strokeStart and strokeEnd properties directly.
+ */
 @property (nonatomic, assign) CGFloat strokeStart, strokeEnd;
 
+/**
+ This property uses CAShapeLayer lineWidth property directly.
+ */
 @property (nonatomic, assign) CGFloat lineWidth;
 
+/**
+ This property uses CAShapeLayer miterLimit property directly.
+ */
 @property (nonatomic, assign) CGFloat miterLimit;
 
-@property (nonatomic, copy) NSString *lineCap;
+/**
+ This property is automatically converted to QuartzCore line cap constant values on CAShapeLayer.
+ */
+@property (nonatomic, assign) CGLineCap lineCap;
 
-@property (nonatomic, copy) NSString *lineJoin;
+/**
+ This property is automatically converted to QuartzCore line join constant values on CAShapeLayer.
+ */
+@property (nonatomic, assign) CGLineJoin lineJoin;
 
+/**
+ This property uses CAShapeLayer lineDashPhase property directly.
+ */
 @property (nonatomic, assign) CGFloat lineDashPhase;
 
+/**
+ This property uses CAShapeLayer lineDashPattern property directly.
+ */
 @property (nonatomic, copy) NSArray *lineDashPattern;
 
 /**
+ Set this property to YES, if you want to enable hit testing inside CAShapeLayer path.
  
+ Default value is NO.
  */
 @property (nonatomic, assign) BOOL hitTestInsidePath;
 

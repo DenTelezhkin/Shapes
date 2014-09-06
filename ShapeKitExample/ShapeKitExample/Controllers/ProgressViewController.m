@@ -48,7 +48,7 @@
     CGRect circleRect = CGRectMake(5, 5, side-5, side-5);
     UIBezierPath * circlePath = [UIBezierPath bezierPathWithOvalInRect:circleRect];
     self.progressView.path = circlePath;
-    self.progressView.shapeLayer.lineWidth = 2;
+    self.progressView.lineWidth = 2;
 }
 
 -(void)setupInfiniteProgressView

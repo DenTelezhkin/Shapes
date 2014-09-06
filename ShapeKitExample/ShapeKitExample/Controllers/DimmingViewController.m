@@ -23,7 +23,7 @@
     UIBezierPath * roundedPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(158, 251, 100, 100)];
     
     self.dimmingDynamicView = [DTDimmedView new];
-    self.dimmingDynamicView.opacity = 0.7;
+    self.dimmingDynamicView.dimmingOpacity = 0.7;
     self.dimmingDynamicView.frame = self.view.bounds;
     self.dimmingDynamicView.visiblePath = roundedPath;
     [self.view addSubview:self.dimmingDynamicView];

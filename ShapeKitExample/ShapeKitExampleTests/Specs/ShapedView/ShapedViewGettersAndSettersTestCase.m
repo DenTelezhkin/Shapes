@@ -48,4 +48,22 @@
     XCTAssert([self.view.shapeLayer.fillRule isEqualToString:kCAFillRuleNonZero]);
 }
 
+-(void)testLineCap
+{
+    self.view.lineCap = kCGLineCapRound;
+    XCTAssert([self.view.shapeLayer.lineCap isEqualToString:kCALineCapRound]);
+    
+    self.view.lineCap = kCGLineCapButt;
+    XCTAssert([self.view.shapeLayer.lineCap isEqualToString:kCALineCapButt]);
+}
+
+-(void)testLineJoin
+{
+    self.view.lineJoin = kCGLineJoinBevel;
+    XCTAssert([self.view.shapeLayer.lineJoin isEqualToString:kCALineJoinBevel]);
+    
+    self.view.lineJoin = kCGLineJoinMiter;
+    XCTAssert([self.view.shapeLayer.lineJoin isEqualToString:kCALineJoinMiter]);
+}
+
 @end

@@ -11,7 +11,9 @@
 
 @implementation DTShapeView
 
-@dynamic fillRule, strokeStart, strokeEnd, lineWidth, miterLimit, lineCap, lineJoin, lineDashPhase, lineDashPattern;
+@dynamic strokeStart, strokeEnd, lineWidth, miterLimit, lineCap, lineJoin, lineDashPhase, lineDashPattern;
+
+@synthesize fillColor = _fillColor, strokeColor = _strokeColor;
 
 +(Class)layerClass
 {
@@ -44,10 +46,30 @@
     [self.shapeLayer setFillColor:[fillColor CGColor]];
 }
 
+-(UIColor *)fillColor
+{
+    return [UIColor colorWithCGColor:[self.shapeLayer fillColor]];
+}
+
+-(UIColor *)strokeColor
+{
+   return [UIColor colorWithCGColor:[self.shapeLayer strokeColor]];
+}
+
 -(void)setStrokeColor:(UIColor *)strokeColor
 {
     _strokeColor = strokeColor;
     [self.shapeLayer setStrokeColor:[strokeColor CGColor]];
+}
+
+-(void)setUsesEvenOddFillRule:(BOOL)usesEvenOddFillRule
+{
+    self.shapeLayer.fillRule = usesEvenOddFillRule ? kCAFillRuleEvenOdd : kCAFillRuleNonZero;
+}
+
+-(BOOL)usesEvenOddFillRule
+{
+    return self.shapeLayer.fillRule == kCAFillRuleEvenOdd;
 }
 
 - (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)key {

@@ -7,26 +7,9 @@
 //
 
 #import "CAShapeLayer+UIBezierPath.h"
+#import "DTGraphicsConverter.h"
 
 @implementation CAShapeLayer (UIBezierPath)
-
-+(NSDictionary *)dt_lineCaps
-{
-    return @{
-             kCALineCapSquare : @(kCGLineCapSquare),
-             kCALineCapButt : @(kCGLineCapButt),
-             kCALineCapRound : @(kCGLineCapRound)
-             };
-}
-
-+(NSDictionary *)dt_lineJoins
-{
-    return @{
-             kCALineJoinRound : @(kCGLineJoinRound),
-             kCALineJoinMiter : @(kCGLineJoinMiter),
-             kCALineJoinBevel : @(kCGLineJoinBevel)
-             };
-}
 
 -(void)dt_updateWithBezierPath:(UIBezierPath *)path
 {
@@ -34,8 +17,8 @@
     self.lineWidth = path.lineWidth;
     self.miterLimit = path.miterLimit;
     
-    self.lineCap = [[[[self class] dt_lineCaps] allKeysForObject:@(path.lineCapStyle)] firstObject];
-    self.lineJoin = [[[[self class] dt_lineJoins] allKeysForObject:@(path.lineJoinStyle)] firstObject];
+    self.lineCap = [DTGraphicsConverter lineCapFromCGLineCap:path.lineCapStyle];
+    self.lineJoin = [DTGraphicsConverter lineJoinFromCGLineJoin:path.lineJoinStyle];
     
     self.fillRule = path.usesEvenOddFillRule ? kCAFillRuleEvenOdd : kCAFillRuleNonZero;
     
@@ -59,8 +42,8 @@
     path.lineWidth = self.lineWidth;
     path.miterLimit = self.miterLimit;
 
-    path.lineCapStyle = [[[[self class] dt_lineCaps] objectForKey:self.lineCap] intValue];
-    path.lineJoinStyle = [[[[self class] dt_lineCaps] objectForKey:self.lineJoin] intValue];
+    path.lineCapStyle = [DTGraphicsConverter lineCapFromCALineCap:self.lineCap];
+    path.lineJoinStyle = [DTGraphicsConverter lineJoinFromCALineJoin:self.lineJoin];
     
     path.usesEvenOddFillRule = (self.fillRule == kCAFillRuleEvenOdd);
     

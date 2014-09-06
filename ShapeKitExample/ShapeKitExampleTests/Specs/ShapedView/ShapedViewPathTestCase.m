@@ -56,18 +56,4 @@
     XCTAssert([self.view.shapeLayer.fillRule isEqualToString:kCAFillRuleEvenOdd]);
 }
 
--(void)testFillColor
-{
-    [self.view setFillColor:[UIColor redColor]];
-    UIColor * color = [UIColor colorWithCGColor:self.view.shapeLayer.fillColor];
-    XCTAssert([color isEqual:[UIColor redColor]]);
-}
-
--(void)testStrokeColor
-{
-    [self.view setStrokeColor:[UIColor blueColor]];
-    UIColor * color = [UIColor colorWithCGColor:self.view.shapeLayer.strokeColor];
-    XCTAssert([color isEqual:[UIColor blueColor]]);
-}
-
 @end

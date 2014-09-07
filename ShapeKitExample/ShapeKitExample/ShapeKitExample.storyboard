@@ -225,7 +225,7 @@
             </objects>
             <point key="canvasLocation" x="1366" y="59"/>
         </scene>
-        <!--Progress View Controller-->
+        <!--Progress View Controller - Progress views-->
         <scene sceneID="Eke-j8-GCZ">
             <objects>
                 <viewController id="8wJ-Kq-bLN" customClass="ProgressViewController" sceneMemberID="viewController">
@@ -253,15 +253,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" id="wnj-qb-iJt" customClass="DTProgressView">
+                                <rect key="frame" x="131" y="248" width="58" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ur2-wQ-DZW"/>
+                    <navigationItem key="navigationItem" title="Progress views" id="Ur2-wQ-DZW"/>
                     <connections>
                         <outlet property="ellipseProgressView" destination="BBD-AB-TeX" id="ISh-6l-XNW"/>
                         <outlet property="infiniteProgressView" destination="7hU-CG-Upi" id="yAu-P2-gja"/>
                         <outlet property="progressView" destination="FfU-P2-OF8" id="6K7-z6-Eq2"/>
                         <outlet property="simpleProgressView" destination="8a1-7M-sPo" id="ZWN-fj-1d8"/>
+                        <outlet property="verticalProgressView" destination="wnj-qb-iJt" id="5f0-Zi-q9e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Anc-Hm-pDW" userLabel="First Responder" sceneMemberID="firstResponder"/>

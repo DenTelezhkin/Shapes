@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet DTProgressView *progressView;
 @property (weak, nonatomic) IBOutlet DTProgressView *infiniteProgressView;
 @property (weak, nonatomic) IBOutlet DTProgressView *ellipseProgressView;
+@property (weak, nonatomic) IBOutlet DTProgressView *verticalProgressView;
 
 @end
 
@@ -32,6 +33,7 @@
     [self setupProgressView];
     [self setupInfiniteProgressView];
     [self setupEllipseProgressView];
+    [self setupVerticalRoundedProgressView];
     
     [self increaseProgress];
 }
@@ -70,6 +72,20 @@
     [self.infiniteProgressView.shapeLayer addAnimation:spinAnimation forKey:@"spin animation"];
 }
 
+-(void)setupVerticalRoundedProgressView
+{
+    UIBezierPath * path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(self.verticalProgressView.bounds.size.width/2, 0)];
+    [path addLineToPoint:CGPointMake(self.verticalProgressView.bounds.size.width/2,
+                                     self.verticalProgressView.frame.size.height)];
+
+    path.lineWidth = 5;
+    self.verticalProgressView.path = path;
+    self.verticalProgressView.lineCap = kCGLineCapRound;
+    
+    self.verticalProgressView.strokeColor = [UIColor grayColor];
+}
+
 -(void)setupEllipseProgressView
 {
     UIBezierPath * path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.ellipseProgressView.frame.size.width/2, self.ellipseProgressView.frame.size.height)
@@ -79,7 +95,7 @@
                                                       clockwise:NO];
     path.lineWidth = 2;
     self.ellipseProgressView.path = path;
-
+    
     self.ellipseProgressView.strokeColor = [UIColor magentaColor];
 }
 
@@ -88,23 +104,18 @@
     if (self.progressView.progress == 1)
     {
         [self.progressView setProgress:0 animated:NO];
-    }
-    if (self.simpleProgressView.progress == 1)
-    {
         [self.simpleProgressView setProgress:0 animated:NO];
-    }
-    
-    if (self.ellipseProgressView.progress == 1)
-    {
         [self.ellipseProgressView setProgress:0 animated:NO];
+        [self.verticalProgressView setProgress:0 animated:NO];
     }
     float random = (arc4random() % 10)/100.0;
 
-    [self.simpleProgressView setProgress:self.simpleProgressView.progress + random animated:YES];
-
-    [self.progressView setProgress:self.progressView.progress + random  animated:YES];
-    [self.ellipseProgressView setProgress:self.ellipseProgressView.progress + random
-                                 animated:YES];
+    float progress = self.simpleProgressView.progress + random;
+    
+    [self.simpleProgressView setProgress:progress animated:YES];
+    [self.progressView setProgress:progress animated:YES];
+    [self.ellipseProgressView setProgress:progress animated:YES];
+    [self.verticalProgressView setProgress:progress animated:YES];
  
     [self performSelector:@selector(increaseProgress) withObject:nil afterDelay:0.15];
 }

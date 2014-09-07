@@ -8,11 +8,11 @@
 
 #import "VoiceMemosRecordButtonViewController.h"
 #import "DTShapeView.h"
-#import "DTShapedButton.h"
+#import "DTShapeButton.h"
 
 @interface VoiceMemosRecordButtonViewController ()
 @property (weak, nonatomic) IBOutlet DTShapeView *whiteShapeView;
-@property (weak, nonatomic) IBOutlet DTShapedButton *recordButton;
+@property (weak, nonatomic) IBOutlet DTShapeButton *recordButton;
 
 @property (nonatomic, assign) BOOL isRecording;
 @end

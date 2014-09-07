@@ -27,13 +27,13 @@
 		9AA0175F198511BD001A0666 /* DTDimmingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175A198511BD001A0666 /* DTDimmingView.m */; };
 		9AA01760198511BD001A0666 /* DTProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175C198511BD001A0666 /* DTProgressView.m */; };
 		9AA01761198511BD001A0666 /* DTShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175E198511BD001A0666 /* DTShapeView.m */; };
-		9AA0296219B1E91D0097AAE2 /* DTShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0296119B1E91D0097AAE2 /* DTShapedButton.m */; };
-		9AA0296519B1F9FC0097AAE2 /* DimmableShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0296419B1F9FC0097AAE2 /* DimmableShapedButton.m */; };
+		9AA0296219B1E91D0097AAE2 /* DTShapeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0296119B1E91D0097AAE2 /* DTShapeButton.m */; };
+		9AA0296519B1F9FC0097AAE2 /* DimmableShapeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0296419B1F9FC0097AAE2 /* DimmableShapeButton.m */; };
 		9AA0296819B200B40097AAE2 /* VoiceMemosRecordButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0296719B200B40097AAE2 /* VoiceMemosRecordButtonViewController.m */; };
 		9AAA136919BB07A90073354A /* ShapedViewGettersAndSettersTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA136819BB07A90073354A /* ShapedViewGettersAndSettersTestCase.m */; };
 		9AAA137319BB0DA10073354A /* DTGraphicsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA137219BB0DA10073354A /* DTGraphicsConverter.m */; };
 		9AD1E75919ABA84800576928 /* DownloadButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1E75819ABA84800576928 /* DownloadButtonViewController.m */; };
-		9AD1E76119ABAD8000576928 /* HighlightableShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1E76019ABAD8000576928 /* HighlightableShapedButton.m */; };
+		9AD1E76119ABAD8000576928 /* HighlightableShapeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD1E76019ABAD8000576928 /* HighlightableShapeButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,10 +78,10 @@
 		9AA0175C198511BD001A0666 /* DTProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTProgressView.m; sourceTree = "<group>"; };
 		9AA0175D198511BD001A0666 /* DTShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTShapeView.h; sourceTree = "<group>"; };
 		9AA0175E198511BD001A0666 /* DTShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTShapeView.m; sourceTree = "<group>"; };
-		9AA0296019B1E91D0097AAE2 /* DTShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTShapedButton.h; sourceTree = "<group>"; };
-		9AA0296119B1E91D0097AAE2 /* DTShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTShapedButton.m; sourceTree = "<group>"; };
-		9AA0296319B1F9FC0097AAE2 /* DimmableShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DimmableShapedButton.h; path = Controls/DimmableShapedButton.h; sourceTree = "<group>"; };
-		9AA0296419B1F9FC0097AAE2 /* DimmableShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DimmableShapedButton.m; path = Controls/DimmableShapedButton.m; sourceTree = "<group>"; };
+		9AA0296019B1E91D0097AAE2 /* DTShapeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTShapeButton.h; sourceTree = "<group>"; };
+		9AA0296119B1E91D0097AAE2 /* DTShapeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTShapeButton.m; sourceTree = "<group>"; };
+		9AA0296319B1F9FC0097AAE2 /* DimmableShapeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DimmableShapeButton.h; path = Controls/DimmableShapeButton.h; sourceTree = "<group>"; };
+		9AA0296419B1F9FC0097AAE2 /* DimmableShapeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DimmableShapeButton.m; path = Controls/DimmableShapeButton.m; sourceTree = "<group>"; };
 		9AA0296619B200B40097AAE2 /* VoiceMemosRecordButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoiceMemosRecordButtonViewController.h; path = Controllers/VoiceMemosRecordButtonViewController.h; sourceTree = "<group>"; };
 		9AA0296719B200B40097AAE2 /* VoiceMemosRecordButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoiceMemosRecordButtonViewController.m; path = Controllers/VoiceMemosRecordButtonViewController.m; sourceTree = "<group>"; };
 		9AAA136819BB07A90073354A /* ShapedViewGettersAndSettersTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShapedViewGettersAndSettersTestCase.m; path = Specs/ShapedView/ShapedViewGettersAndSettersTestCase.m; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 		9AAA137219BB0DA10073354A /* DTGraphicsConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGraphicsConverter.m; sourceTree = "<group>"; };
 		9AD1E75719ABA84800576928 /* DownloadButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadButtonViewController.h; path = Controllers/DownloadButtonViewController.h; sourceTree = "<group>"; };
 		9AD1E75819ABA84800576928 /* DownloadButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadButtonViewController.m; path = Controllers/DownloadButtonViewController.m; sourceTree = "<group>"; };
-		9AD1E75F19ABAD8000576928 /* HighlightableShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighlightableShapedButton.h; path = Controls/HighlightableShapedButton.h; sourceTree = "<group>"; };
-		9AD1E76019ABAD8000576928 /* HighlightableShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighlightableShapedButton.m; path = Controls/HighlightableShapedButton.m; sourceTree = "<group>"; };
+		9AD1E75F19ABAD8000576928 /* HighlightableShapeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighlightableShapeButton.h; path = Controls/HighlightableShapeButton.h; sourceTree = "<group>"; };
+		9AD1E76019ABAD8000576928 /* HighlightableShapeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighlightableShapeButton.m; path = Controls/HighlightableShapeButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,8 +250,8 @@
 		9AA0295F19B1E9010097AAE2 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				9AA0296019B1E91D0097AAE2 /* DTShapedButton.h */,
-				9AA0296119B1E91D0097AAE2 /* DTShapedButton.m */,
+				9AA0296019B1E91D0097AAE2 /* DTShapeButton.h */,
+				9AA0296119B1E91D0097AAE2 /* DTShapeButton.m */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -280,10 +280,10 @@
 		9AD1E75E19ABAD3B00576928 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				9AD1E75F19ABAD8000576928 /* HighlightableShapedButton.h */,
-				9AD1E76019ABAD8000576928 /* HighlightableShapedButton.m */,
-				9AA0296319B1F9FC0097AAE2 /* DimmableShapedButton.h */,
-				9AA0296419B1F9FC0097AAE2 /* DimmableShapedButton.m */,
+				9AD1E75F19ABAD8000576928 /* HighlightableShapeButton.h */,
+				9AD1E76019ABAD8000576928 /* HighlightableShapeButton.m */,
+				9AA0296319B1F9FC0097AAE2 /* DimmableShapeButton.h */,
+				9AA0296419B1F9FC0097AAE2 /* DimmableShapeButton.m */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -406,12 +406,12 @@
 				9A1F569619B34A83003E957E /* DTAnimatableShapeLayer.m in Sources */,
 				9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */,
 				9AA01760198511BD001A0666 /* DTProgressView.m in Sources */,
-				9AA0296519B1F9FC0097AAE2 /* DimmableShapedButton.m in Sources */,
+				9AA0296519B1F9FC0097AAE2 /* DimmableShapeButton.m in Sources */,
 				9AD1E75919ABA84800576928 /* DownloadButtonViewController.m in Sources */,
 				9AA0173A19851133001A0666 /* AppDelegate.m in Sources */,
 				9AA01761198511BD001A0666 /* DTShapeView.m in Sources */,
-				9AD1E76119ABAD8000576928 /* HighlightableShapedButton.m in Sources */,
-				9AA0296219B1E91D0097AAE2 /* DTShapedButton.m in Sources */,
+				9AD1E76119ABAD8000576928 /* HighlightableShapeButton.m in Sources */,
+				9AA0296219B1E91D0097AAE2 /* DTShapeButton.m in Sources */,
 				9AA0296819B200B40097AAE2 /* VoiceMemosRecordButtonViewController.m in Sources */,
 				9AAA137319BB0DA10073354A /* DTGraphicsConverter.m in Sources */,
 				9A79790D19974D1700E43B41 /* DimmingViewController.m in Sources */,

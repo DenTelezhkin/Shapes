@@ -23,15 +23,15 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import "DTDimmedView.h"
+#import "DTDimmingView.h"
 #import "CAShapeLayer+UIBezierPath.h"
 
-@interface DTDimmedView()
+@interface DTDimmingView()
 @property (nonatomic, strong) CAShapeLayer * fillLayer;
 
 @end
 
-@implementation DTDimmedView
+@implementation DTDimmingView
 
 @synthesize dimmedPath = _dimmedPath;
 

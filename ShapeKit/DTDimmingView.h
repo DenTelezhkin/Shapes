@@ -24,9 +24,9 @@
 //  THE SOFTWARE.
 
 /**
- `DTDimmedView` allows dimming part of the view, by "cutting" visible path from it. By default, dimming path contains entire UIView bounds. Create UIBezierPath, that describes, which part of the view should be visible, and set it on `DTDimmedView` instance to allow content to be seen.
+ `DTDimmingView` allows dimming part of the view, by "cutting" visible path from it. By default, dimming path contains entire UIView bounds. Create UIBezierPath, that describes, which part of the view should be visible, and set it on `DTDimmingView` instance to allow content to be seen.
  */
-@interface DTDimmedView : UIView
+@interface DTDimmingView : UIView
 
 /**
  UIBezierPath, that describes, which part of the content should be visible. It must be completely inside dimmedPath for dimming to work.

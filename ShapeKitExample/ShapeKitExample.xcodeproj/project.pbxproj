@@ -24,7 +24,7 @@
 		9AA0174419851133001A0666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0172919851133001A0666 /* Foundation.framework */; };
 		9AA0174519851133001A0666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0172D19851133001A0666 /* UIKit.framework */; };
 		9AA0174D19851133001A0666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AA0174B19851133001A0666 /* InfoPlist.strings */; };
-		9AA0175F198511BD001A0666 /* DTDimmedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175A198511BD001A0666 /* DTDimmedView.m */; };
+		9AA0175F198511BD001A0666 /* DTDimmingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175A198511BD001A0666 /* DTDimmingView.m */; };
 		9AA01760198511BD001A0666 /* DTProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175C198511BD001A0666 /* DTProgressView.m */; };
 		9AA01761198511BD001A0666 /* DTShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0175E198511BD001A0666 /* DTShapeView.m */; };
 		9AA0296219B1E91D0097AAE2 /* DTShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA0296119B1E91D0097AAE2 /* DTShapedButton.m */; };
@@ -72,8 +72,8 @@
 		9AA0174219851133001A0666 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9AA0174A19851133001A0666 /* ShapeKitExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShapeKitExampleTests-Info.plist"; sourceTree = "<group>"; };
 		9AA0174C19851133001A0666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9AA01759198511BD001A0666 /* DTDimmedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDimmedView.h; sourceTree = "<group>"; };
-		9AA0175A198511BD001A0666 /* DTDimmedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTDimmedView.m; sourceTree = "<group>"; };
+		9AA01759198511BD001A0666 /* DTDimmingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDimmingView.h; sourceTree = "<group>"; };
+		9AA0175A198511BD001A0666 /* DTDimmingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTDimmingView.m; sourceTree = "<group>"; };
 		9AA0175B198511BD001A0666 /* DTProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTProgressView.h; sourceTree = "<group>"; };
 		9AA0175C198511BD001A0666 /* DTProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTProgressView.m; sourceTree = "<group>"; };
 		9AA0175D198511BD001A0666 /* DTShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTShapeView.h; sourceTree = "<group>"; };
@@ -234,8 +234,8 @@
 				9AAA136A19BB09B90073354A /* Helpers */,
 				9AA0295F19B1E9010097AAE2 /* Controls */,
 				9A9BA46119A3990D0068E1EF /* Categories */,
-				9AA01759198511BD001A0666 /* DTDimmedView.h */,
-				9AA0175A198511BD001A0666 /* DTDimmedView.m */,
+				9AA01759198511BD001A0666 /* DTDimmingView.h */,
+				9AA0175A198511BD001A0666 /* DTDimmingView.m */,
 				9AA0175B198511BD001A0666 /* DTProgressView.h */,
 				9AA0175C198511BD001A0666 /* DTProgressView.m */,
 				9AA0175D198511BD001A0666 /* DTShapeView.h */,
@@ -402,7 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AA0175F198511BD001A0666 /* DTDimmedView.m in Sources */,
+				9AA0175F198511BD001A0666 /* DTDimmingView.m in Sources */,
 				9A1F569619B34A83003E957E /* DTAnimatableShapeLayer.m in Sources */,
 				9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */,
 				9AA01760198511BD001A0666 /* DTProgressView.m in Sources */,

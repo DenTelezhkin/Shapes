@@ -21,7 +21,7 @@ All `DTShapeView` properties are automatically converted to CAShapeLayer propert
 
 `DTProgressView` is a `DTShapeView` subclass, that allow animating progress views of any shape. `DTProgressView` uses `DTShapeView` path as track.
 
-By default, DTProgressView fills entire view bounds, filling view from left to right. And all you need to create a progress view, is drop it onto your view, set strokeColor and your progress view is ready!
+By default, `DTProgressView` fills entire view bounds, filling view from left to right. And all you need to create a progress view, is drop it onto your view, set strokeColor and your progress view is ready!
 
 ```objective-c
 self.simpleProgressView.strokeColor = [UIColor greenColor];

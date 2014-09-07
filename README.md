@@ -52,6 +52,8 @@ And progress change will be animated. `DTProgressView` supports any geometric sh
 self.downloadButton.shape.path = [UIBezierPath bezierPathWithRoundedRect:self.downloadButton.bounds cornerRadius:5.0f];
 ```
 
+To find out more about how animating between shapes works, read [Animatable buttons with ShapeKit tutorial](https://github.com/DenHeadless/ShapeKit/wiki/Building-animatable-buttons-with-ShapeKit)
+
 ## Examples
 
 Take a look at example project, provided in ShapeKitExample folder.

@@ -23,12 +23,10 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import "DTShapeView.h"
-
 /**
  `DTDimmedView` allows dimming part of the view, by "cutting" visible path from it. By default, dimming path contains entire UIView bounds. Create UIBezierPath, that describes, which part of the view should be visible, and set it on `DTDimmedView` instance to allow content to be seen.
  */
-@interface DTDimmedView : DTShapeView
+@interface DTDimmedView : UIView
 
 /**
  UIBezierPath, that describes, which part of the content should be visible. It must be completely inside dimmedPath for dimming to work.

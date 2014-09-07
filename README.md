@@ -45,3 +45,22 @@ And progress change will be animated. `DTProgressView` supports any geometric sh
 ```
 
 ### Shaped buttons
+
+`DTShapedButton` is a UIButton, that has `DTShapedView` added as a sublayer. As a result, it allows manipulating UIButton shape and visual appearance by changing `DTShapedView` properties. By default, button shape is a rectangle with UIButton bounds set as it's frame. For example, drawing initial state of AppStore download button looks like this:
+
+```objective-c
+self.downloadButton.shape.path = [UIBezierPath bezierPathWithRoundedRect:self.downloadButton.bounds cornerRadius:5.0f];
+```
+
+## Requirements
+
+* iOS 7 and higher
+* ARC
+* XCode 5 and iOS 7.1 SDK
+
+## Installation
+
+Using CocoaPods:
+```bash
+pod 'ShapeKit', '~> 1.0.0'
+```

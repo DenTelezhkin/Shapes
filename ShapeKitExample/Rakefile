@@ -1,0 +1,16 @@
+require 'xcpretty'
+
+scheme_name = "ShapeKitExample"
+ 
+def run(command, min_exit_status = 0)
+  puts "Executing: `#{command}`"
+  system(command)
+  return $?.exitstatus
+end
+ 
+desc "Run #{scheme_name} tests"
+task :run_tests do
+  $tests_success = run("xcodebuild -scheme \"#{scheme_name}\" -destination 'name=iPhone Retina (4-inch),OS=7.1' clean test | xcpretty -tc; exit ${PIPESTATUS[0]}")
+end
+ 
+task default: 'run_tests'

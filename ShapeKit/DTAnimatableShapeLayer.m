@@ -27,16 +27,22 @@
 
 @implementation DTAnimatableShapeLayer
 
-- (id)actionForKey:(NSString *)event
+-(id<CAAction>)actionForKey:(NSString *)key
 {
-    if ([event isEqualToString:@"path"])
+    if ([key isEqualToString:@"path"])
     {
-        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:event];
-        animation.duration = [CATransaction animationDuration];
-        animation.timingFunction = [CATransaction animationTimingFunction];
-        return animation;
+        return [self customAnimationForKey:key];
     }
-    return [super actionForKey:event];
+    return [super actionForKey:key];
+}
+
+- (CABasicAnimation *) customAnimationForKey: (NSString *) key
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:key];
+    animation.fromValue = [self.presentationLayer valueForKey:key];
+    animation.duration = [CATransaction animationDuration];
+    [animation setValue:key forKey:@"Animation Type"];
+    return animation;
 }
 
 @end

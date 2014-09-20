@@ -12,6 +12,7 @@
 		9A5DF42719854B200034FF62 /* ShapeKitExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5DF42619854B200034FF62 /* ShapeKitExample.storyboard */; };
 		9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5DF429198562C80034FF62 /* ProgressViewController.m */; };
 		9A79790D19974D1700E43B41 /* DimmingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79790C19974D1700E43B41 /* DimmingViewController.m */; };
+		9A7BE45F19CD750D00A7FD29 /* CATransaction+AnimateWithDuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7BE45E19CD750D00A7FD29 /* CATransaction+AnimateWithDuration.m */; };
 		9A9BA46419A3992F0068E1EF /* CAShapeLayer+UIBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9BA46319A3992F0068E1EF /* CAShapeLayer+UIBezierPath.m */; };
 		9AA0172A19851133001A0666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0172919851133001A0666 /* Foundation.framework */; };
 		9AA0172C19851133001A0666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA0172B19851133001A0666 /* CoreGraphics.framework */; };
@@ -55,6 +56,8 @@
 		9A5DF429198562C80034FF62 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressViewController.m; path = Controllers/ProgressViewController.m; sourceTree = "<group>"; };
 		9A79790B19974D1700E43B41 /* DimmingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DimmingViewController.h; path = Controllers/DimmingViewController.h; sourceTree = "<group>"; };
 		9A79790C19974D1700E43B41 /* DimmingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DimmingViewController.m; path = Controllers/DimmingViewController.m; sourceTree = "<group>"; };
+		9A7BE45D19CD750D00A7FD29 /* CATransaction+AnimateWithDuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransaction+AnimateWithDuration.h"; sourceTree = "<group>"; };
+		9A7BE45E19CD750D00A7FD29 /* CATransaction+AnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+AnimateWithDuration.m"; sourceTree = "<group>"; };
 		9A9BA46219A3992F0068E1EF /* CAShapeLayer+UIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+UIBezierPath.h"; sourceTree = "<group>"; };
 		9A9BA46319A3992F0068E1EF /* CAShapeLayer+UIBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+UIBezierPath.m"; sourceTree = "<group>"; };
 		9AA0172619851133001A0666 /* ShapeKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +152,8 @@
 			children = (
 				9A9BA46219A3992F0068E1EF /* CAShapeLayer+UIBezierPath.h */,
 				9A9BA46319A3992F0068E1EF /* CAShapeLayer+UIBezierPath.m */,
+				9A7BE45D19CD750D00A7FD29 /* CATransaction+AnimateWithDuration.h */,
+				9A7BE45E19CD750D00A7FD29 /* CATransaction+AnimateWithDuration.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				9A1F569619B34A83003E957E /* DTAnimatableShapeLayer.m in Sources */,
 				9A5DF42A198562C80034FF62 /* ProgressViewController.m in Sources */,
 				9AA01760198511BD001A0666 /* DTProgressView.m in Sources */,
+				9A7BE45F19CD750D00A7FD29 /* CATransaction+AnimateWithDuration.m in Sources */,
 				9AA0296519B1F9FC0097AAE2 /* DimmableShapeButton.m in Sources */,
 				9AD1E75919ABA84800576928 /* DownloadButtonViewController.m in Sources */,
 				9AA0173A19851133001A0666 /* AppDelegate.m in Sources */,

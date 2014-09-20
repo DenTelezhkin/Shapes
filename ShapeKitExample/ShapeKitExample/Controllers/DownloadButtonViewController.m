@@ -7,6 +7,8 @@
 //
 
 #import "DownloadButtonViewController.h"
+#import "DTAnimatableShapeLayer.h"
+#import "CATransaction+AnimateWithDuration.h"
 
 @interface DownloadButtonViewController()
 @property (weak, nonatomic) IBOutlet DTShapeButton *progressButton;
@@ -35,18 +37,20 @@
 - (IBAction)downloadTapped:(id)sender
 {
     [self.downloadButton setTitle:@"" forState:UIControlStateNormal];
-    [UIView animateWithDuration:0.25
-                     animations:^{
-                         CGRect frame = CGRectMake(self.downloadButton.frame.origin.x - self.progressButton.frame.size.width-5,
-                                                   0,
-                                                   self.progressButton.frame.size.width+5,
-                                                   self.progressButton.frame.size.height);
-                         self.downloadButton.shape.path = [UIBezierPath bezierPathWithRoundedRect:frame
-                                                                                     cornerRadius:10.0];
-                     } completion:^(BOOL finished) {
-                         self.downloadButton.hidden = YES;
-                         self.progressButton.hidden = NO;
-                     }];
+    
+    CGRect frame = CGRectMake(self.downloadButton.frame.origin.x - self.progressButton.frame.size.width-5,
+                              0,
+                              self.progressButton.frame.size.width+5,
+                              self.progressButton.frame.size.height);
+    UIBezierPath * roundedPath = [UIBezierPath bezierPathWithRoundedRect:frame
+                                                            cornerRadius:10.0];
+    [CATransaction dt_animateWithDuration:0.25
+                               animations:^{
+                                  [self.downloadButton.shape setPath:roundedPath];
+                               } completion:^{
+                                   self.downloadButton.hidden = YES;
+                                   self.progressButton.hidden = NO;
+                               }];
 }
 
 - (IBAction)progressButtonTapped:(id)sender
@@ -54,17 +58,13 @@
     self.downloadButton.hidden = NO;
     self.progressButton.hidden = YES;
     
-    [UIView animateWithDuration:0.25
-                     animations:^{
-                         self.downloadButton.shape.path = [UIBezierPath bezierPathWithRoundedRect:self.downloadButton.bounds
-                                                                                     cornerRadius:5.0f];
-                     }
-                     completion:^(BOOL finished) {
-                         if (finished)
-                         {
-                             [self.downloadButton setTitle:@"DOWNLOAD" forState:UIControlStateNormal];
-                         }
-                     }];
+    [CATransaction dt_animateWithDuration:0.25
+                               animations:^{
+                                   self.downloadButton.shape.path = [UIBezierPath bezierPathWithRoundedRect:self.downloadButton.bounds
+                                                                                               cornerRadius:5.0f];
+                               } completion:^{
+                                   [self.downloadButton setTitle:@"DOWNLOAD" forState:UIControlStateNormal];
+                               }];
 }
 
 @end

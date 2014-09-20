@@ -26,6 +26,7 @@
 #import "DTShapeView.h"
 #import "CAShapeLayer+UIBezierPath.h"
 #import "DTGraphicsConverter.h"
+#import "DTAnimatableShapeLayer.h"
 
 @implementation DTShapeView
 
@@ -35,7 +36,7 @@
 
 +(Class)layerClass
 {
-    return [CAShapeLayer class];
+    return [DTAnimatableShapeLayer class];
 }
 
 -(CAShapeLayer *)shapeLayer
@@ -46,7 +47,7 @@
 #pragma mark - method forwarding
 
 - (BOOL)shouldForwardSelector:(SEL)aSelector {
-    return (![[self.layer superclass] instancesRespondToSelector:aSelector] &&
+    return (![[[self.layer superclass] superclass] instancesRespondToSelector:aSelector] &&
             [self.layer respondsToSelector:aSelector]);
 }
 
@@ -59,7 +60,11 @@
 -(void)setPath:(UIBezierPath *)path
 {
     _path = path;
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:[CATransaction animationDuration]];
+    [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut] ];
     [self.shapeLayer dt_updateWithBezierPath:path];
+    [CATransaction commit];
 }
 
 -(void)setFillColor:(UIColor *)fillColor
@@ -110,26 +115,6 @@
 -(CGLineJoin)lineJoin
 {
     return [DTGraphicsConverter lineJoinFromCALineJoin:self.shapeLayer.lineJoin];
-}
-
-
-#pragma mark CALayerDelegate protocol
-
-- (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)key {
-    id<CAAction> action = [super actionForLayer:layer forKey:key];
-    
-    if ([layer isEqual:self.layer] && [[NSNull null] isEqual:action]) {
-        if ([self shouldForwardSelector:NSSelectorFromString(key)]) {
-            CABasicAnimation *animation = (CABasicAnimation *)[self actionForLayer:layer forKey:@"bounds"];
-            if ([animation isKindOfClass:[CABasicAnimation class]]) {
-                animation.fromValue = [layer valueForKey:key];
-                animation.keyPath = key;
-                action = animation;
-            }
-        }
-    }
-    
-    return action;
 }
 
 #pragma mark - hit testing

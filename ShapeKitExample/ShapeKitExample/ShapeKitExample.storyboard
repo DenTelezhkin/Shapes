@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="121-Wy-hHe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="121-Wy-hHe">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Root View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="10B-6E-GMS">
             <objects>
                 <tableViewController id="n0G-pU-Imy" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
             </objects>
             <point key="canvasLocation" x="444" y="59"/>
         </scene>
-        <!--Voice Memos Record Button View Controller - VoiceMemos record button-->
+        <!--VoiceMemos record button-->
         <scene sceneID="aWF-nH-EMC">
             <objects>
                 <viewController id="36Z-If-t9d" customClass="VoiceMemosRecordButtonViewController" sceneMemberID="viewController">
@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="969" y="391"/>
         </scene>
-        <!--Download Button View Controller - AppStore download button-->
+        <!--AppStore download button-->
         <scene sceneID="pRx-OY-zFW">
             <objects>
                 <viewController id="5Gd-cJ-hJw" customClass="DownloadButtonViewController" sceneMemberID="viewController">
@@ -233,7 +233,7 @@
             </objects>
             <point key="canvasLocation" x="1366" y="59"/>
         </scene>
-        <!--Progress View Controller - Progress views-->
+        <!--Progress views-->
         <scene sceneID="Eke-j8-GCZ">
             <objects>
                 <viewController id="8wJ-Kq-bLN" customClass="ProgressViewController" sceneMemberID="viewController">

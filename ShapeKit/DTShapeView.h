@@ -23,6 +23,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+#import "DTAnimatableShapeLayer.h"
+
 /**
  `DTShapeView` is a UIView subclass, that is backed by CAShapeLayer instead of CALayer. It provides API for changing CAShapeLayer path, fill and stroke colors and other layer properties, basically allowing UIView to behave like geometric shape.
  
@@ -38,7 +40,7 @@
 /**
  CAShapeLayer, that is backing view.
  */
-@property (nonatomic, strong, readonly) CAShapeLayer * shapeLayer;
+@property (nonatomic, strong, readonly) DTAnimatableShapeLayer * shapeLayer;
 
 /**
  Fill color, used by CAShapeLayer. UIColor is automatically converted to and from CAShapeLayer fillColor property.

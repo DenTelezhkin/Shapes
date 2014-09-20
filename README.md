@@ -60,9 +60,9 @@ Take a look at example project, provided in ShapeKitExample folder.
 
 ## Requirements
 
-* iOS 7 and higher
+* iOS 7,8 
 * ARC
-* XCode 5 and iOS 7.1 SDK
+* XCode 6 and iOS 8 SDK
 
 ## Installation
 

@@ -9,6 +9,7 @@
 #import "VoiceMemosRecordButtonViewController.h"
 #import "DTShapeView.h"
 #import "DTShapeButton.h"
+#import "CATransaction+AnimateWithDuration.h"
 
 @interface VoiceMemosRecordButtonViewController ()
 @property (weak, nonatomic) IBOutlet DTShapeView *whiteShapeView;
@@ -45,16 +46,17 @@
                                                          cornerRadius:4];
     UIBezierPath * toPath = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(self.recordButton.frame, 18, 18)
                                                        cornerRadius:4];
-    [UIView animateWithDuration:0.25
-                     animations:^{
-                         if (self.isRecording)
-                         {
-                             [(CAShapeLayer *)self.recordButton.shape.shapeLayer.mask setPath:[toPath CGPath]];
-                         }
-                         else {
-                             [(CAShapeLayer *)self.recordButton.shape.shapeLayer.mask setPath:[fromPath CGPath]];
-                         }
-                     }];
+    
+    [CATransaction dt_animateWithDuration:0.25
+                               animations:^{
+                                   if (self.isRecording)
+                                   {
+                                       [(CAShapeLayer *)self.recordButton.shape.shapeLayer.mask setPath:[toPath CGPath]];
+                                   }
+                                   else {
+                                       [(CAShapeLayer *)self.recordButton.shape.shapeLayer.mask setPath:[fromPath CGPath]];
+                                   }
+                               } completion:nil];
 }
 
 @end

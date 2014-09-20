@@ -31,4 +31,11 @@
 
 @interface DTAnimatableShapeLayer : CAShapeLayer
 
+/**
+ Set of all animatable properties on CAShapeLayer. By default, contains "path" key. Add properties to the set, if you wan't them to change with animation.
+ 
+ To animate changes, use CATransaction, or provided CATransaction+AnimateWithDuration convenience category.
+ */
+@property (nonatomic, strong) NSMutableSet * animatableKeys;
+
 @end

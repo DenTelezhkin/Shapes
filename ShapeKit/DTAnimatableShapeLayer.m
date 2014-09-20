@@ -27,9 +27,18 @@
 
 @implementation DTAnimatableShapeLayer
 
+-(NSMutableSet *)animatableKeys
+{
+    if (!_animatableKeys)
+    {
+        _animatableKeys = [NSMutableSet setWithObject:@"path"];
+    }
+    return _animatableKeys;
+}
+
 -(id<CAAction>)actionForKey:(NSString *)key
 {
-    if ([key isEqualToString:@"path"])
+    if ([self.animatableKeys containsObject:key])
     {
         return [self customAnimationForKey:key];
     }
@@ -41,7 +50,6 @@
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:key];
     animation.fromValue = [self.presentationLayer valueForKey:key];
     animation.duration = [CATransaction animationDuration];
-    [animation setValue:key forKey:@"Animation Type"];
     return animation;
 }
 

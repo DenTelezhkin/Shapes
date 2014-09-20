@@ -58,6 +58,7 @@
 		9A79790C19974D1700E43B41 /* DimmingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DimmingViewController.m; path = Controllers/DimmingViewController.m; sourceTree = "<group>"; };
 		9A7BE45D19CD750D00A7FD29 /* CATransaction+AnimateWithDuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransaction+AnimateWithDuration.h"; sourceTree = "<group>"; };
 		9A7BE45E19CD750D00A7FD29 /* CATransaction+AnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+AnimateWithDuration.m"; sourceTree = "<group>"; };
+		9A7BE46019CD912200A7FD29 /* ShapeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeKit.h; sourceTree = "<group>"; };
 		9A9BA46219A3992F0068E1EF /* CAShapeLayer+UIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+UIBezierPath.h"; sourceTree = "<group>"; };
 		9A9BA46319A3992F0068E1EF /* CAShapeLayer+UIBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+UIBezierPath.m"; sourceTree = "<group>"; };
 		9AA0172619851133001A0666 /* ShapeKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +237,7 @@
 		9AA01758198511BD001A0666 /* ShapeKit */ = {
 			isa = PBXGroup;
 			children = (
+				9A7BE46019CD912200A7FD29 /* ShapeKit.h */,
 				9AAA136A19BB09B90073354A /* Helpers */,
 				9AA0295F19B1E9010097AAE2 /* Controls */,
 				9A9BA46119A3990D0068E1EF /* Categories */,

@@ -1,7 +1,6 @@
-ShapeKit
-========
+![](Images/shapes_logo.png)
 
-ShapeKit is a set of wrappers around CAShapeLayer and UIBezierPath, that allows drawing and animating geometrically shaped views on iOS.
+Shapes is a set of wrappers around CAShapeLayer and UIBezierPath, that allows drawing and animating geometrically shaped views on iOS.
 
 ![](Images/progress_view.gif)
 ![](Images/dimming_view.gif)
@@ -52,11 +51,11 @@ And progress change will be animated. `DTProgressView` supports any geometric sh
 self.downloadButton.shape.path = [UIBezierPath bezierPathWithRoundedRect:self.downloadButton.bounds cornerRadius:5.0f];
 ```
 
-To find out more about how animating between shapes works, read [Animatable buttons with ShapeKit tutorial](https://github.com/DenHeadless/ShapeKit/wiki/Building-animatable-buttons-with-ShapeKit)
+To find out more about how animating between shapes works, read [Animatable buttons with Shapes tutorial](https://github.com/DenHeadless/Shapes/wiki/Building-animatable-buttons-with-Shapes)
 
 ## Examples
 
-Take a look at example project, provided in ShapeKitExample folder.
+Take a look at example project, provided in ShapesExample folder.
 
 ## Requirements
 
@@ -68,5 +67,5 @@ Take a look at example project, provided in ShapeKitExample folder.
 
 Using CocoaPods:
 ```bash
-pod 'ShapeKit', '~> 1.0.0'
+pod 'Shapes', '~> 1.0.0'
 ```

@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/DenHeadless/Shapes"
   s.screenshots  = "https://github.com/DenHeadless/Shapes/raw/master/Images/progress_view.gif", "https://github.com/DenHeadless/Shapes/raw/master/Images/dimming_view.gif","https://github.com/DenHeadless/Shapes/raw/master/Images/app_store_download_button.gif", "https://github.com/DenHeadless/Shapes/raw/master/Images/voice_memos_record_button.gif"
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   
   s.author             = { "Denys Telezhkin" => "denys.telezhkin@yandex.ru" }
   s.social_media_url = 'https://twitter.com/DTCoder'

@@ -1,3 +1,7 @@
+![CocoaPod platform](https://cocoapod-badges.herokuapp.com/p/Shapes/badge.png) &nbsp; 
+![CocoaPod version](https://cocoapod-badges.herokuapp.com/v/Shapes/badge.png) &nbsp; 
+![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
+
 ![](Images/shapes_logo.png)
 
 Shapes is a set of wrappers around CAShapeLayer and UIBezierPath, that allows drawing and animating geometrically shaped views on iOS. Read more about it on the blog: http://mlsdev.com/blog/23

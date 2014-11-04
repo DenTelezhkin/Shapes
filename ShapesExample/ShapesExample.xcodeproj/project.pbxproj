@@ -290,7 +290,6 @@
 				9AA0172219851133001A0666 /* Sources */,
 				9AA0172319851133001A0666 /* Frameworks */,
 				9AA0172419851133001A0666 /* Resources */,
-				0803834AD9B94E88867EC364 /* Find unused imports */,
 			);
 			buildRules = (
 			);
@@ -372,23 +371,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0803834AD9B94E88867EC364 /* Find unused imports */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Find unused imports";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"/Users/Denys/Library/Application Support/Developer/Shared/Xcode/Plug-ins/xcfui.xcplugin/Contents/Resources/fui_script.sh\" \"/Users/Denys/Developer/Projects/ShapeKit/ShapeKitExample\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9AA0172219851133001A0666 /* Sources */ = {

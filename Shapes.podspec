@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "Shapes"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Framework for drawing and animating shaped views on iOS"
 
   s.homepage     = "https://github.com/DenHeadless/Shapes"

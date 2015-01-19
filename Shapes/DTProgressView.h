@@ -35,7 +35,7 @@
 /**
  `DTProgressView` progress. Value range from 0 to 1, 0 by default.
  */
-@property (nonatomic, assign, readonly) float progress;
+@property (nonatomic, assign, readonly) IBInspectable float progress;
 
 /**
  Duration of an animated progress change.

@@ -45,32 +45,37 @@
 /**
  Fill color, used by CAShapeLayer. UIColor is automatically converted to and from CAShapeLayer fillColor property.
  */
-@property (nonatomic, strong) UIColor * fillColor;
+@property (nonatomic, strong) IBInspectable UIColor * fillColor;
 
 /**
  Stroke color, used by CAShapeLayer. UIColor is automatically converted to and from CAShapeLayer strokeColor property.
  */
-@property (nonatomic, strong) UIColor * strokeColor;
+@property (nonatomic, strong) IBInspectable UIColor * strokeColor;
 
 /**
  Fill rule, used by CAShapeLayer. Automatically converts to CAFillRule constant values on CAShapeLayer.
  */
-@property (nonatomic, assign) BOOL usesEvenOddFillRule;
+@property (nonatomic, assign) IBInspectable BOOL usesEvenOddFillRule;
 
 /**
- These properties use CAShapeLayer strokeStart and strokeEnd properties directly.
+ Set CAShapeLayer strokeStart property.
  */
-@property (nonatomic, assign) CGFloat strokeStart, strokeEnd;
+@property (nonatomic, assign) IBInspectable CGFloat strokeStart;
+
+/**
+ Set CAShapeLayer strokeEnd property.
+ */
+@property (nonatomic, assign) IBInspectable CGFloat strokeEnd;
 
 /**
  This property uses CAShapeLayer lineWidth property directly.
  */
-@property (nonatomic, assign) CGFloat lineWidth;
+@property (nonatomic, assign) IBInspectable CGFloat lineWidth;
 
 /**
  This property uses CAShapeLayer miterLimit property directly.
  */
-@property (nonatomic, assign) CGFloat miterLimit;
+@property (nonatomic, assign) IBInspectable CGFloat miterLimit;
 
 /**
  This property is automatically converted to QuartzCore line cap constant values on CAShapeLayer.

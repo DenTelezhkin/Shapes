@@ -25,6 +25,13 @@
 
 #import "DTShapeView.h"
 
+#if __has_feature(nullability) // Xcode 6.3+
+#pragma clang assume_nonnull begin
+#else
+#define nullable
+#define __nullable
+#endif
+
 /**
  ` DTShapeButton` is a UIButton, that has `DTShapedView` added as a subview. As a result, it allows manipulating UIButton shape and visual appearance by changing `DTShapedView` properties. By default, button shape is a rectangle with UIButton bounds set as it's frame.
  */
@@ -33,6 +40,11 @@
 /**
  `DTShapeView`, added as a sublayer to UIButton's layer. 
  */
-@property (nonatomic, strong) DTShapeView * shape;
+@property (nonatomic, strong, nullable) DTShapeView * shape;
 
 @end
+
+#if __has_feature(nullability)
+#pragma clang assume_nonnull end
+#endif
+

@@ -23,6 +23,13 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+#if __has_feature(nullability) // Xcode 6.3+
+#pragma clang assume_nonnull begin
+#else
+#define nullable
+#define __nullable
+#endif
+
 /**
  `DTDimmingView` allows dimming part of the view, by "cutting" visible path from it. By default, dimming path contains entire UIView bounds. Create UIBezierPath, that describes, which part of the view should be visible, and set it on `DTDimmingView` instance to allow content to be seen.
  */
@@ -31,12 +38,12 @@
 /**
  UIBezierPath, that describes, which part of the content should be visible. It must be completely inside dimmedPath for dimming to work.
  */
-@property (nonatomic, strong) UIBezierPath * visiblePath;
+@property (nonatomic, strong, nullable) UIBezierPath * visiblePath;
 
 /**
  UIBezierPath, that describes, which part of the view should be dimmed. By default, entire view is dimmed.
  */
-@property (nonatomic, strong) UIBezierPath * dimmedPath;
+@property (nonatomic, strong, null_resettable) UIBezierPath * dimmedPath;
 
 /**
  Opacity for dimming view. 0.9 by default.
@@ -46,6 +53,10 @@
 /**
  Color of a dimming view. [UIColor blackColor] by default.
  */
-@property (nonatomic, strong) UIColor * dimmingColor UI_APPEARANCE_SELECTOR;
+@property (nonatomic, strong, nullable) UIColor * dimmingColor UI_APPEARANCE_SELECTOR;
 
 @end
+
+#if __has_feature(nullability)
+#pragma clang assume_nonnull end
+#endif

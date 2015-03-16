@@ -25,6 +25,13 @@
 
 #import "DTShapeView.h"
 
+#if __has_feature(nullability) // Xcode 6.3+
+#pragma clang assume_nonnull begin
+#else
+#define nullable
+#define __nullable
+#endif
+
 /**
  `DTProgressView` is a `DTShapeView` subclass, that allow animating progress views of any shape. `DTProgressView` uses `DTShapeView` path as track. Stroke start and stroke end properties provide ability to change progress state of a view.
  
@@ -47,7 +54,7 @@
 /**
  Animation function to use, when animating progress change.
  */
-@property (nonatomic, strong) CAValueFunction * animationFunction;
+@property (nonatomic, strong, nullable) CAValueFunction * animationFunction;
 
 /**
  Set progress value. This method is an alias for setStrokeEnd:animated:.
@@ -77,3 +84,7 @@
 - (void)setStrokeEnd:(float)end animated:(BOOL)animated;
 
 @end
+
+#if __has_feature(nullability)
+#pragma clang assume_nonnull end
+#endif

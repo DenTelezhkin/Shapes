@@ -25,6 +25,13 @@
 
 #import <Foundation/Foundation.h>
 
+#if __has_feature(nullability) // Xcode 6.3+
+#pragma clang assume_nonnull begin
+#else
+#define nullable
+#define __nullable
+#endif
+
 /**
  `DTGraphicsConverter` allows converting from CoreGraphics values to Quartz values and vice versa.
  */
@@ -52,3 +59,7 @@
 +(NSString *)lineJoinFromCGLineJoin:(CGLineJoin)lineJoin;
 
 @end
+
+#if __has_feature(nullability)
+#pragma clang assume_nonnull end
+#endif

@@ -25,6 +25,13 @@
 
 #import "DTAnimatableShapeLayer.h"
 
+#if __has_feature(nullability) // Xcode 6.3+
+#pragma clang assume_nonnull begin
+#else
+#define nullable
+#define __nullable
+#endif
+
 /**
  `DTShapeView` is a UIView subclass, that is backed by CAShapeLayer instead of CALayer. It provides API for changing CAShapeLayer path, fill and stroke colors and other layer properties, basically allowing UIView to behave like geometric shape.
  
@@ -35,7 +42,7 @@
 /**
  Setting path property automatically converts all UIBezierPath properties to CAShapeLayer properties.
  */
-@property (nonatomic, strong) UIBezierPath * path;
+@property (nonatomic, strong, nullable) UIBezierPath * path;
 
 /**
  CAShapeLayer, that is backing view.
@@ -105,3 +112,7 @@
 @property (nonatomic, assign) BOOL hitTestInsidePath;
 
 @end
+
+#if __has_feature(nullability)
+#pragma clang assume_nonnull end
+#endif

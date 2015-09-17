@@ -55,21 +55,26 @@
 
 -(void)setupInfiniteProgressView
 {
-    self.infiniteProgressView.strokeColor = [UIColor blueColor];
+    // Does not seem to work properly on iOS 8.4 and iOS 9
     
-    CGFloat side = self.infiniteProgressView.bounds.size.width - 5;
-    CGRect circleRect = CGRectMake(5, 5, side-5, side-5);
-    UIBezierPath * path = [UIBezierPath bezierPathWithOvalInRect:circleRect];
-    path.lineWidth = 1;
-    self.infiniteProgressView.path = path;
-    [self.infiniteProgressView setStrokeEnd:0.85 animated:NO];
     
-    CABasicAnimation *spinAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-    spinAnimation.toValue        = @(1*2*M_PI);
-    spinAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    spinAnimation.duration       = 1.0;
-    spinAnimation.repeatCount    = INFINITY;
-    [self.infiniteProgressView.shapeLayer addAnimation:spinAnimation forKey:@"spin animation"];
+//    self.infiniteProgressView.strokeColor = [UIColor blueColor];
+//    
+//    CGFloat side = self.infiniteProgressView.bounds.size.width - 5;
+//    CGRect circleRect = CGRectMake(5, 5, side-5, side-5);
+//    UIBezierPath * path = [UIBezierPath bezierPathWithOvalInRect:circleRect];
+//    path.lineWidth = 1;
+//    self.infiniteProgressView.path = path;
+//    [self.infiniteProgressView setStrokeEnd:0.85 animated:NO];
+    
+//    CABasicAnimation *spinAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+//    spinAnimation.fromValue = @0;
+//    spinAnimation.toValue        = @(M_PI*2);
+//    spinAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+//    spinAnimation.duration       = 10.0;
+//    spinAnimation.cumulative = YES;
+//    spinAnimation.repeatCount    = INFINITY;
+//    [self.infiniteProgressView.shapeLayer addAnimation:spinAnimation forKey:@"spin animation"];
 }
 
 -(void)setupVerticalRoundedProgressView

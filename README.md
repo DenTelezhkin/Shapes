@@ -63,13 +63,13 @@ Take a look at example project, provided in ShapesExample folder.
 
 ## Requirements
 
-* iOS 7,8 
+* iOS 7,8,9 
 * ARC
-* XCode 6 and iOS 8 SDK
+* XCode 7 and iOS 9 SDK
 
 ## Installation
 
 Using CocoaPods:
 ```bash
-pod 'Shapes', '~> 1.0.0'
+pod 'Shapes', '~> 1.1.0'
 ```

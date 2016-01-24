@@ -1,6 +1,6 @@
 ![CocoaPod platform](https://cocoapod-badges.herokuapp.com/p/Shapes/badge.png) &nbsp; 
 ![CocoaPod version](https://cocoapod-badges.herokuapp.com/v/Shapes/badge.png) &nbsp; 
-![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)]()
 
 ![](Images/shapes_logo.png)
 

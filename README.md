@@ -65,7 +65,7 @@ Take a look at example project, provided in ShapesExample folder.
 
 * iOS 7,8,9 
 * ARC
-* XCode 7 and iOS 9 SDK
+* Xcode 7 and iOS 9 SDK
 
 ## Installation
 

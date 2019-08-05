@@ -4,7 +4,7 @@
 
 ![](Images/shapes_logo.png)
 
-Shapes is a set of wrappers around CAShapeLayer and UIBezierPath, that allows drawing and animating geometrically shaped views on iOS. Read more about it on the blog: http://mlsdev.com/blog/23
+Shapes is a set of wrappers around CAShapeLayer and UIBezierPath, that allows drawing and animating geometrically shaped views on iOS.
 
 ![](Images/progress_view.gif)
 ![](Images/dimming_view.gif)
